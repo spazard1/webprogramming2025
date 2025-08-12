@@ -1,0 +1,43 @@
+import PropTypes from "prop-types";
+
+import "./Rules.css";
+
+const rules = [
+  "No inline styles or inline javascript.",
+  "Error messages must be “in-page” i.e. no pop-ups or alerts.",
+  "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission.",
+  "All requests that submit a body to your server must have their entities validated with appropriate annotations, such as MinLength, Range, or Required.",
+  "The root path of your server must display the main page of your application.",
+  "Service/data/model classes must not have any http, request, or response references.",
+  "Controller entity classes must not be used directly to store data on the server; translate them into a model (data storage) class before saving the data. Conversely, controllers must not send any model classes to the user; translate them into controller entity classes before sending the response.",
+  "All service class instances must be obtained using dependency injection.",
+  "You may not use any synchronous methods in your C# code wherever there is an async option.",
+  "All controllers (and their corresponding entities) must enforce the usage of an api version. Your namespace and folder structure for controllers and entities must contain the api version.",
+];
+
+const Rules = ({ maxRuleNumber, existingRuleNumber }) => {
+  return (
+    <div className="rulesContainer">
+      {rules.map((text, index) => {
+        {
+          maxRuleNumber >= index + 1 && (
+            <div className="ruleContainer">
+              {index + 1}.
+              {existingRuleNumber <= index + 1 && (
+                <div className="newRuleContainer">(New Rule)</div>
+              )}
+              {text}
+            </div>
+          );
+        }
+      })}
+    </div>
+  );
+};
+
+export default Rules;
+
+Rules.propTypes = {
+  maxRuleNumber: PropTypes.number.isRequired,
+  existingRuleNumber: PropTypes.number.isRequired,
+};
