@@ -21,7 +21,7 @@ const exampleHtmlImport = `
 
 const exampleReactImport = `
     import React, { useEffect } from 'react';
-    import { registerStretchLevels } from '"https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
+    import { registerStretchLevels } from "https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
 
     export default SomeComponent = () => {
       useEffect(() => {
