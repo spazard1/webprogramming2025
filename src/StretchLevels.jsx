@@ -1,16 +1,8 @@
 import "./StretchLevels.css";
 
-import registerStretchLevels from "./stretchLevels.js";
+//import "https://raw.githubusercontent.com/spazard1/webprogramming2025/refs/heads/main/src/stretchLevels.js";
 
 const StretchLevels = () => {
-  registerStretchLevels([
-    "I’m in the corner!",
-    "Second div up!",
-    "Third one here!",
-    "Fourth in line!",
-    "Fifth div",
-  ]);
-
   return (
     <div>
       <div>

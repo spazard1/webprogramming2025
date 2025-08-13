@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     />
 
+    <script src="https://spazard1.github.io/webprogramming2025/src/stretchLevels.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"
       crossorigin
@@ -32,5 +34,17 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register stretch levels with example messages
+      window.onload = () => {
+        registerStretchLevels([
+          "I’m in the corner!",
+          "Second div up!",
+          "Third one here!",
+          "Fourth in line!",
+          "Fifth div",
+        ]);
+      };
+    </script>
   </body>
 </html>

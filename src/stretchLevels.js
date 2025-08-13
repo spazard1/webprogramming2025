@@ -59,3 +59,6 @@ function removeStretchLevels() {
 export { registerStretchLevels, removeStretchLevels };
 
 export default registerStretchLevels;
+
+window.registerStretchLevels = registerStretchLevels;
+window.removeStretchLevels = removeStretchLevels;
