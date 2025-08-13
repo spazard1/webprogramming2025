@@ -1,28 +1,34 @@
 import Assignment from "./Assignment";
 
-const Assignment1_HTMLCSSJavascript = () => {
+const HTMLCSSJavascript = () => {
   return (
     <Assignment
-      title="1. HTML/CSS/Javascript"
+      title="HTML/CSS/Javascript"
       description={
         "For this first assignment, you will be creating a basic HTML page that contains CSS and javascript. It certainly won’t be fancy looking. That’s fine, but it might have superheroes."
       }
-      stretchLevels={[
-        {
-          title: "Basic",
-          description: "Complete the assignment with the minimum requirements.",
-        },
-        {
-          title: "Intermediate",
-          description: "Add some additional features or styling.",
-        },
-        {
-          title: "Advanced",
-          description: "Implement advanced JavaScript functionality.",
-        },
-      ]}
       maxRuleNumber={3}
       existingRuleNumber={0}
+      stretchLevelOverview={
+        "If you already have a lot of experience with HTML and CSS or you just like superheroes as much as me, try to complete these stretch levels for a reputation bonus."
+      }
+      stretchLevels={[
+        {
+          title: "Hawkeye Level",
+          description:
+            "Make the background of the page two colors instead of one. The left half one color and the right half a different color. The block of text from step 1 should still cover the full page from left to right. No using background images for this either. Do it with block elements.",
+        },
+        {
+          title: "Iron Man Level",
+          description:
+            "Add a button in the lower right corner that moves the color dividing line from Hawkeye level to a random position. I.e. it starts at a 50% split, but each time you click it the % split will change, perhaps to 10%, 30%, or even 85%. Random numbers!",
+        },
+        {
+          title: "Thor Level",
+          description:
+            "In Iron Man level you made the vertical split be randomly changeable. Now made the transition happen smoothly over 1 second Don’t forget, no external libraries. Also, no javascript loops allowed! Use CSS.",
+        },
+      ]}
     >
       <div className="assignmentSectionContainer">
         <div className="assignmentSectionTitle">(20 Points) HTML and CSS</div>
@@ -56,7 +62,7 @@ const Assignment1_HTMLCSSJavascript = () => {
                 should be too big though; I want to read about superheroes.
               </li>
               <li>
-                The last div can be whatever and wherever you want, but put a
+                The last can be whatever and wherever you want, but put a
                 picture inside it.
               </li>
             </ol>
@@ -87,7 +93,7 @@ const Assignment1_HTMLCSSJavascript = () => {
           <li>
             If the JSON contains the following keys, use the values to change
             things about the page. (remember these are case-sensitive)
-            <ol>
+            <ol className="assignmentSectionSubContent">
               <li>
                 color: Set the color of the text of the page to this value.
               </li>
@@ -105,50 +111,10 @@ const Assignment1_HTMLCSSJavascript = () => {
           </li>
         </ol>
       </div>
-
-      <div className="stretchLevelsHeader">Stretch Levels</div>
-      <div className="stretchLevelsContainer">
-        <div className="stretchLevelsOverview">
-          If you already have a lot of experience with HTML and CSS or you just
-          like superheroes as much as me, try to complete these stretch levels
-          for a reputation bonus. In order to receive credit for a stretch
-          level, you must register it in your assignment. Learn how at the{" "}
-          <a href="/stretchLevels">stretch levels</a> page.
-        </div>
-        <div className="stretchLevel">
-          <div className="stretchLevelTitle">Hawkeye Level</div>
-          <div className="stretchLevelDescription">
-            Make the background of the page two colors instead of one. The left
-            half one color and the right half a different color. The block of
-            text from step 1 should still cover the full page from left to
-            right. No using background images for this either. Do it with block
-            elements. Your json should use backgroundColorLeft and
-            backgroundColorRight instead of backgroundColor.
-          </div>
-        </div>
-        <div className="stretchLevel">
-          <div className="stretchLevelTitle">Iron Man Level</div>
-          <div className="stretchLevelDescription">
-            Add a button in the lower right corner that moves the color dividing
-            line from Hawkeye level to a random position. I.e. it starts at a
-            50% split, but each time you click it the % split will change,
-            perhaps to 10%, 30%, or even 85%. Random numbers!
-          </div>
-        </div>
-        <div className="stretchLevel">
-          <div className="stretchLevelTitle">Thor Level</div>
-          <div className="stretchLevelDescription">
-            In Iron Man level you made the vertical split be randomly
-            changeable. Now made the transition happen smoothly over 1 second.
-            Don’t forget, no external libraries. Also, no javascript loops
-            allowed! Use CSS.
-          </div>
-        </div>
-      </div>
     </Assignment>
   );
 };
 
-export default Assignment1_HTMLCSSJavascript;
+export default HTMLCSSJavascript;
 
-Assignment1_HTMLCSSJavascript.propTypes = {};
+HTMLCSSJavascript.propTypes = {};

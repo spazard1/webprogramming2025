@@ -1,11 +1,19 @@
-import Assignment1_HTMLCSSJavascript from "./Assignment1_HTMLCSSJavascript";
+import { useParams } from "react-router";
+import HTMLCSSJavascript from "./HTMLCSSJavascript";
 
 import "./Assignments.css";
 
+const assignments = {
+  HTMLCSSJavascript: () => <HTMLCSSJavascript />,
+};
 const Assignments = () => {
+  let { assignment } = useParams();
+
+  const AssignmentComponent = assignments[assignment];
+
   return (
     <div className="assignmentsContainer">
-      <Assignment1_HTMLCSSJavascript />
+      {assignments[assignment] && <AssignmentComponent />}
     </div>
   );
 };

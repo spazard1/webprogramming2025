@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Rules.css";
 
 const rules = [
-  "No inline styles or inline javascript.",
+  "No inline styles or inline javascript. Event handlers (e.g. onClick) to call functions are ok.",
   "Error messages must be “in-page” i.e. no pop-ups or alerts.",
   "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission.",
   "All requests that submit a body to your server must have their entities validated with appropriate annotations, such as MinLength, Range, or Required.",
@@ -18,13 +18,15 @@ const rules = [
 const Rules = ({ maxRuleNumber, existingRuleNumber }) => {
   return (
     <div className="rulesContainer">
+      <div className="sectionHeader">The Rules</div>
+
       {rules.map((text, index) => (
         <div className="ruleItem" key={index}>
           {maxRuleNumber >= index + 1 && (
             <div className="ruleContainer">
               {index + 1}.
               {existingRuleNumber < index + 1 && (
-                <span className="newRuleContainer">(New Rule)</span>
+                <span className="newRuleContainer">(New)</span>
               )}
               {text}
             </div>

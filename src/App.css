@@ -18,6 +18,12 @@ a {
   color: lightblue;
 }
 
+.title {
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -25,6 +31,8 @@ a {
   justify-content: center;
   gap: 1rem;
   width: 60%;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
 }

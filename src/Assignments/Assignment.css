@@ -1,15 +1,29 @@
 .assignmentContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.assignmentTitle {
-  align-self: center;
-  font-size: 1.2rem;
+.assignmentSectionTitle {
   font-weight: bold;
 }
 
 .assignmentSectionSubContent {
   list-style: lower-alpha;
+}
+
+.stretchLevelsOverview {
+  margin-bottom: 1rem;
+}
+
+.stretchLevelsContainer {
+  margin-left: 1rem;
+}
+
+.stretchLevelTitle {
+  font-weight: bold;
+}
+
+.stretchLevelDescription {
+  margin-left: 1rem;
 }

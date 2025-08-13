@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import "./StretchLevels.css";
 
-import { registerStretchLevels, removeStretchLevels } from "https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
+import {
+  registerStretchLevels,
+  removeStretchLevels,
+} from "https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
 
 const exampleHtmlImport = `
     <script type="module">
@@ -32,32 +35,30 @@ const exampleReactImport = `
     }`;
 
 const StretchLevels = () => {
-
   useEffect(() => {
-    // Register stretch levels with example messages
     registerStretchLevels([
-      "I’m in the corner!",
-      "Second div up!",
-      "Third one here!",
-      "Fourth in line!",
-      "Fifth div",
+      "will look like.",
+      "registered stretch levels",
+      "This is what",
     ]);
-    
+
     return () => {
-      // Cleanup stretch levels on component unmount
       removeStretchLevels();
     };
   }, []);
 
   return (
     <div>
+      <div className="title">Stretch Levels</div>
+
       <div>
         All assignments offer stretch levels for an additional challenge.
-        Completing these stretch levels gives you a reputation bonus.
+        Completing stretch levels gives you reputation bonuses.
       </div>
       <div>
         In order to receive credit for a stretch level, you must register it in
         your assignment. Here is how you can do that for HTML or React pages.
+        Using either of these methods does not break rule 1 for assignments.
       </div>
 
       <div className="stretchLevelsExample">
