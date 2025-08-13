@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 function registerStretchLevels(messages) {
   if (!Array.isArray(messages)) {
     console.error("registerStretchLevels expects an array of strings.");
@@ -59,6 +58,3 @@ function removeStretchLevels() {
 export { registerStretchLevels, removeStretchLevels };
 
 export default registerStretchLevels;
-
-window.registerStretchLevels = registerStretchLevels;
-window.removeStretchLevels = removeStretchLevels;
