@@ -1,0 +1,25 @@
+.assignmentsContainer {
+  font-size: 0.85rem;
+}
+
+.stretchLevelsHeader {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stretchLevelsOverview {
+  margin-bottom: 1rem;
+}
+
+.stretchLevelsContainer {
+  justify-self: center;
+  width: 85%;
+}
+
+.stretchLevelTitle {
+  font-weight: bold;
+}
+
+.stretchLevelDescription {
+  margin-left: 1rem;
+}

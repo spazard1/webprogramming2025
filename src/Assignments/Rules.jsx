@@ -18,19 +18,19 @@ const rules = [
 const Rules = ({ maxRuleNumber, existingRuleNumber }) => {
   return (
     <div className="rulesContainer">
-      {rules.map((text, index) => {
-        {
-          maxRuleNumber >= index + 1 && (
+      {rules.map((text, index) => (
+        <div className="ruleItem" key={index}>
+          {maxRuleNumber >= index + 1 && (
             <div className="ruleContainer">
               {index + 1}.
-              {existingRuleNumber <= index + 1 && (
-                <div className="newRuleContainer">(New Rule)</div>
+              {existingRuleNumber < index + 1 && (
+                <span className="newRuleContainer">(New Rule)</span>
               )}
               {text}
             </div>
-          );
-        }
-      })}
+          )}
+        </div>
+      ))}
     </div>
   );
 };

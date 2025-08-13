@@ -1,0 +1,15 @@
+.assignmentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.assignmentTitle {
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.assignmentSectionSubContent {
+  list-style: lower-alpha;
+}
