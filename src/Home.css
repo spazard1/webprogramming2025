@@ -13,99 +13,32 @@
   gap: 2rem;
 }
 
-.classScheduleHeader {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.teamContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
-}
-
-.teamsInformation {
-  width: 100%;
-  --bs-accordion-color: white;
-  --bs-accordion-active-bg: var(--bs-accordion-bg);
-}
-
-.roundedTag {
-  padding: 0.1rem 0.5rem;
-  border-radius: 0.5rem;
-  align-self: flex-start;
-  white-space: nowrap;
-}
-
-.scheduleAlert {
-  color: black;
-  background-color: orange;
-}
-
-.sprintSchedule {
-  color: black;
-  background-color: palegoldenrod;
-}
-
-.reviewSchedule {
-  color: black;
-  background-color: #cbc3e3;
-}
-
-.team1 {
-  color: black;
-  background-color: aqua;
-}
-
-.team2 {
-  color: black;
-  background-color: lightcoral;
-}
-
-.team3 {
-  color: black;
-  background-color: lightgreen;
-}
-
-.scheduleContainer {
-  width: 100%;
+.classSchedulesContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  --bs-accordion-color: white;
-  --bs-accordion-active-bg: var(--bs-accordion-bg);
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 90vh;
+  gap: 0.5rem 1rem;
+}
+
+.classScheduleItem {
+  width: 50%;
+  height: 10vh;
+  border: 4px solid #111;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0;
+  background-color: #202020;
 }
 
 .classDate {
   color: white;
-  font-size: 1.25rem;
+  font-weight: bold;
   white-space: nowrap;
 }
 
-.classInstance {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.classScheduleItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  gap: 1.5rem;
-  margin-bottom: 0.1rem;
-}
-
 @media only screen and (min-width: 1000px) {
-  .teamsInformation {
-    width: 40%;
-  }
-
   .scheduleContainer {
     width: 50%;
   }

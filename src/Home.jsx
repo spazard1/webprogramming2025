@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef } from "react";
-import Accordion from "react-bootstrap/Accordion";
 
 import "./Home.css";
 
@@ -15,49 +14,63 @@ const Home = () => {
   const schedules = useMemo(
     () => [
       {
-        date: "February 4",
+        date: "September 2",
+        lectures: ["HTML/CSS/Javascript/JSON"],
       },
       {
-        date: "February 11",
+        date: "September 9",
+        lectures: ["Web Requests"],
+        assignment: {
+          url: "/assignments/HTMLCSSJavascript",
+          title: "HTML/CSS/Javascript",
+        },
       },
       {
-        date: "February 18",
+        date: "September 16",
+        lectures: ["Web API"],
+        assignment: {
+          url: "/assignments/WebRequests",
+          title: "Web Requests",
+        },
       },
       {
-        date: "February 25",
+        date: "September 23",
       },
       {
-        date: "March 4",
+        date: "September 30",
       },
       {
-        date: "March 11",
+        date: "October 7",
       },
       {
-        date: "March 25",
+        date: "October 14",
       },
       {
-        date: "April 1",
+        date: "October 21",
       },
       {
-        date: "April 8",
+        date: "October 28",
       },
       {
-        date: "April 15",
+        date: "November 4",
       },
       {
-        date: "April 22",
+        date: "November 11",
       },
       {
-        date: "April 29",
+        date: "November 18",
       },
       {
-        date: "May 6",
+        date: "November 25",
       },
       {
-        date: "May 13",
+        date: "December 2",
       },
       {
-        date: "May 20",
+        date: "December 9",
+      },
+      {
+        date: "December 16",
       },
     ],
     []
@@ -65,7 +78,6 @@ const Home = () => {
 
   const now = new Date();
   const currentYear = now.getFullYear();
-
   const closest = schedules.reduce((closestItem, item) => {
     const itemDate = new Date(item.date + " " + currentYear);
 
@@ -94,66 +106,44 @@ const Home = () => {
 
   return (
     <>
-      {schedules.map((schedule) => (
-        <Accordion
-          key={schedule.date}
-          className="scheduleContainer"
-          data-bs-theme="dark"
-          defaultActiveKey={
-            new Date(Date.parse(schedule.date + " 2025 23:00")) > new Date()
-              ? "1"
-              : ""
-          }
-        >
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              <div
-                ref={schedule === closest ? scrollRef : null}
-                className="classScheduleHeader"
-              >
-                <div className="classDate">{schedule.date}</div>
-                {schedule.tags?.map((tag) => (
-                  <div className={"roundedTag " + tag.type} key={tag.title}>
-                    {tag.title}
-                  </div>
-                ))}
-              </div>
-            </Accordion.Header>
-            {schedule.slots && (
-              <Accordion.Body>
-                {schedule.slots?.map((slot, index) => (
-                  <div className="classScheduleItem" key={index}>
-                    <div className="classScheduleItemTime">{slot.time}</div>
-                    {slot.title && (
-                      <div className="lectureTitle">{slot.title}</div>
-                    )}
-                    {slot.link && (
-                      <div className="lectureNotesLink">
-                        <a
-                          href={
-                            typeof slot.link === "string"
-                              ? slot.link
-                              : slot.link.url
-                          }
-                        >
-                          {slot.link.title ? slot.link.title : "Slides"}
-                        </a>
-                      </div>
-                    )}
-                    {slot.links?.map((link) => (
-                      <div key={link} className="lectureNotesLink">
-                        <a href={typeof link === "string" ? link : link.url}>
-                          {link.title ? link.title : "Slides"}
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </Accordion.Body>
-            )}
-          </Accordion.Item>
-        </Accordion>
-      ))}
+      <div className="classSchedulesContainer">
+        {schedules.map((schedule) => (
+          <div className="classScheduleItem" key={schedule.date}>
+            <div
+              ref={schedule === closest ? scrollRef : null}
+              className="classScheduleHeader"
+            >
+              <div className="classDate">{schedule.date}</div>
+            </div>
+            <div className="classScheduleContent">
+              {schedule?.lectures?.map((lecture, index) => (
+                <div className="lectureTitle" key={index}>
+                  <span>Lecture - </span>
+                  {typeof lecture === "string" && <>{lecture}</>}
+                  {typeof lecture !== "string" && (
+                    <a href={lecture.url}>{lecture.title}</a>
+                  )}
+                </div>
+              ))}
+              {schedule.assignment && (
+                <div className="scheduleAssignmentContainer">
+                  <span>Assignment Due - </span>
+                  <a href={schedule.assignment.url}>
+                    {schedule.assignment.title}
+                  </a>
+                </div>
+              )}
+              {schedule.links?.map((link) => (
+                <div key={link} className="lectureNotesLink">
+                  <a href={typeof link === "string" ? link : link.url}>
+                    {link.title ? link.title : "Slides"}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

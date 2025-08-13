@@ -1,7 +1,7 @@
 .assignmentContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .assignmentSectionTitle {
@@ -16,7 +16,11 @@
   margin-bottom: 1rem;
 }
 
-.stretchLevelsContainer {
+.stretchLevelsOverview {
+  margin-left: 1rem;
+}
+
+.stretchLevel {
   margin-left: 1rem;
 }
 

@@ -4,10 +4,9 @@ import Home from "./Home";
 import Assignments from "./Assignments/Assignments";
 import StretchLevels from "./StretchLevels";
 import { HelmetProvider } from "react-helmet-async";
+import assignments from "./Assignments/AssignmentsList";
 
 import "./App.css";
-
-const assignments = ["HTMLCSSJavascript", "Assignment2", "Assignment3"];
 
 const App = () => {
   return (
@@ -17,12 +16,12 @@ const App = () => {
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title={"Assignments"} menuVariant="dark">
-              {assignments.map((assignment) => (
+              {Object.keys(assignments).map((assignment, index) => (
                 <NavDropdown.Item
                   key={assignment}
                   href={`/assignments/${assignment}`}
                 >
-                  {assignment}
+                  {index + 1}. {assignment}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>

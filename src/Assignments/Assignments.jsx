@@ -1,11 +1,9 @@
 import { useParams } from "react-router";
-import HTMLCSSJavascript from "./HTMLCSSJavascript";
 
 import "./Assignments.css";
 
-const assignments = {
-  HTMLCSSJavascript: () => <HTMLCSSJavascript />,
-};
+import assignments from "./AssignmentsList";
+
 const Assignments = () => {
   let { assignment } = useParams();
 

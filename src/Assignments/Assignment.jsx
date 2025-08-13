@@ -27,8 +27,9 @@ const Assignment = ({
           maxRuleNumber={maxRuleNumber}
           existingRuleNumber={existingRuleNumber}
         />
-        <div className="sectionHeader">Stretch Levels</div>
         <div className="stretchLevelsContainer">
+          <div className="sectionHeader">Stretch Levels</div>
+
           <div className="stretchLevelsOverview">
             {stretchLevelOverview} In order to receive credit for a stretch
             level, you must register it in your assignment. Learn how at the{" "}
