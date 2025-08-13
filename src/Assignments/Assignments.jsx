@@ -1,8 +1,9 @@
-import Assignment from "./Assignment";
+import Assignment1_HTMLCSSJavascript from "./Assignment1_HTMLCSSJavascript";
+
 import "./Assignments.css";
 
 const Assignments = () => {
-  return <Assignment title="Html/CSS/Javascript"></Assignment>;
+  return <Assignment1_HTMLCSSJavascript />;
 };
 
 export default Assignments;

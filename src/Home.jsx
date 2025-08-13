@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from "react";
 import Accordion from "react-bootstrap/Accordion";
 
 import "./Home.css";
+import Assignments from "./Assignments/Assignments";
 
 //const baseGithubUrl =
 //  "https://github.com/spazard1/softwareprocess2025/raw/refs/heads/main/files/";
@@ -98,6 +99,8 @@ const Home = () => {
   return (
     <>
       <div className="title">Bethel Web Programming 2025</div>
+
+      <Assignments />
 
       {schedules.map((schedule) => (
         <Accordion
