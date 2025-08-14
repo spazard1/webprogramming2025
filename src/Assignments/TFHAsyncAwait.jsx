@@ -97,14 +97,6 @@ const TFHAsyncAwait = () => {
                 5%, Wait: 0%, Run: 10%, where these are percentages of the
                 screen. The jump does not need to have any animations so it will
                 look the same on the screen as “Walk.”
-                <ol>
-                  <li>
-                    Hint: If you put the Mario image inside of a div tag, then
-                    you can use javascript to change the “left” CSS attribute of
-                    that div tag to move it. Div tags can only be moved with the
-                    “left” attribute if you set the “position” attribute also.
-                  </li>
-                </ol>
               </li>
               <li>
                 After the request is successful, then make another request with
@@ -116,7 +108,6 @@ const TFHAsyncAwait = () => {
                 Each time you make a request to the server, also display the
                 message that comes back in the response.
               </li>
-
               <li>
                 Hint: The URL that you will use to make requests to your server
                 from your javascript will look like /api/mariolevel/{"{move}"},
@@ -129,6 +120,12 @@ const TFHAsyncAwait = () => {
                 the external server. It will only be communicating with the
                 server you create, so the URL it will be using will start with
                 “https://localhost”.
+              </li>
+              <li>
+                Hint: If you put the Mario image inside of a div tag, then you
+                can use javascript to change the “left” CSS attribute of that
+                div tag to move it. Div tags can only be moved with the “left”
+                attribute if you set the “position” attribute also.
               </li>
             </ol>
           </li>
@@ -177,7 +174,7 @@ const TFHAsyncAwait = () => {
             make a request to an external server. This method takes one string
             parameter, called “move”, which is the value that was sent to your
             controller as a URL parameter.
-            <ol>
+            <ol className="assignmentSectionSubContent">
               <li>
                 The URL to use for the request is
                 https://webprogrammingmario.azurewebsites.net/api/mario/
@@ -235,7 +232,7 @@ const TFHAsyncAwait = () => {
           <li>
             The javascript code should never be exposed to any errors from the
             external service, nor should it have any knowledge that the external
-            service is being used by MarioLevelController
+            service is being used by MarioLevelController.
           </li>
         </ol>
       </div>
