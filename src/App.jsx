@@ -21,7 +21,7 @@ const App = () => {
                   key={assignment}
                   href={`/assignments/${assignment}`}
                 >
-                  {index + 1}. {assignment}
+                  {index + 1}. {assignments[assignment].title}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>

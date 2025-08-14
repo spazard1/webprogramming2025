@@ -1,16 +1,8 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo } from "react";
 
 import "./Home.css";
 
 const Home = () => {
-  const earlyTeamRef = useRef();
-  const middleTeamRef = useRef();
-  const lateTeamRef = useRef();
-  const scrollRef = useRef();
-  earlyTeamRef.current = 1;
-  middleTeamRef.current = 2;
-  lateTeamRef.current = 3;
-
   const schedules = useMemo(
     () => [
       {
@@ -76,43 +68,12 @@ const Home = () => {
     []
   );
 
-  const now = new Date();
-  const currentYear = now.getFullYear();
-  const closest = schedules.reduce((closestItem, item) => {
-    const itemDate = new Date(item.date + " " + currentYear);
-
-    if (itemDate <= now) {
-      return closestItem;
-    }
-
-    if (
-      !closestItem ||
-      itemDate - now < new Date(closestItem.date + " " + currentYear) - now
-    ) {
-      return item;
-    }
-
-    return closestItem;
-  }, null);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollIntoView({
-        behavior: "instant",
-        block: "center",
-      });
-    }
-  }, []);
-
   return (
     <>
       <div className="classSchedulesContainer">
         {schedules.map((schedule) => (
           <div className="classScheduleItem" key={schedule.date}>
-            <div
-              ref={schedule === closest ? scrollRef : null}
-              className="classScheduleHeader"
-            >
+            <div className="classScheduleHeader">
               <div className="classDate">{schedule.date}</div>
             </div>
             <div className="classScheduleContent">

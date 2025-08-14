@@ -6,7 +6,22 @@ const CloudStorage = () => {
       title="Cloud Storage"
       maxRuleNumber={9}
       existingRuleNumber={9}
-      description={`You’re at tribal council, not sure if you can trust everyone who is sitting around you. Perhaps some of them really are on your side, or perhaps they are about to blindside you. Whatever the outcome, it is the people who learn to outwit, outplay, and outlast who will be at the final tribal council. In this assignment, you will be using azure cloud storage to save table entities and images. Here’s to hoping that Jeff does not snuff out your torch.`}
+      description={
+        <>
+          You’re at tribal council, not sure if you can trust everyone who is
+          sitting around you. Perhaps some of them really are on your side, or
+          perhaps they are about to blindside you. Whatever the outcome, it is
+          the people who learn to outwit, outplay, and outlast who will be at
+          the final tribal council. In this assignment, you will be using azure
+          cloud storage to save table entities and images. Here’s to hoping that
+          Jeff does not snuff out your torch.
+          <br />
+          <br />
+          Staying on track with this assignment will set you up for future
+          success in this class, since two upcoming assignments will build on
+          this one.
+        </>
+      }
       stretchLevelOverview={`If you already have a lot of experience with azure storage accounts, or if you just won an immunity challenge, try to complete these stretch levels for a reputation bonus.`}
       stretchLevels={[
         {

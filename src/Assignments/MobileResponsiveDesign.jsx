@@ -4,8 +4,8 @@ const MobileResponsiveDesign = () => {
   return (
     <Assignment
       title="Mobile and Responsive Design"
-      maxRuleNumber={0}
-      existingRuleNumber={0}
+      maxRuleNumber={10}
+      existingRuleNumber={10}
       description={`Your third Survivor season is about to begin. (The show Survivor has been on for almost 50 seasons; and yes, I’ve seen them all.) In this assignment you will finish your development of the Cloud Storage and Api Versioning project by making it compatible with mobile and responsive design. That means supporting different screen sizes and making elements behave as the user would expect when actions on the page are loading.`}
       stretchLevelOverview={`If you already have a lot of experience with mobile development, or if you just played Survivor for the third time, try to complete these stretch levels for a reputation bonus.`}
       stretchLevels={[
@@ -24,10 +24,12 @@ const MobileResponsiveDesign = () => {
           (40 Points) CSS Media Query
         </div>
         <ol>
-          <li>Start with your completed project, API Versioning.</li>
+          <li>
+            Start with your completed project, API Versioning and Cloud Storage.
+          </li>
           <li>
             Add a media query to your CSS that will activate when the screen
-            width is 1000 or less.
+            width is 1000px or less.
           </li>
           <li>
             All elements of the page must flow correctly at the new screen size.
