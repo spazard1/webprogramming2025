@@ -1,9 +1,9 @@
 import Assignment from "./Assignment";
 
-const MobileResponsiveDesign = () => {
+const ResponsiveDesign = () => {
   return (
     <Assignment
-      title="Mobile and Responsive Design"
+      title="Responsive Design"
       maxRuleNumber={10}
       existingRuleNumber={10}
       description={`Your third Survivor season is about to begin. (The show Survivor has been on for almost 50 seasons; and yes, I’ve seen them all.) In this assignment you will finish your development of the Cloud Storage and Api Versioning project by making it compatible with mobile and responsive design. That means supporting different screen sizes and making elements behave as the user would expect when actions on the page are loading.`}
@@ -90,6 +90,6 @@ const MobileResponsiveDesign = () => {
   );
 };
 
-export default MobileResponsiveDesign;
+export default ResponsiveDesign;
 
-MobileResponsiveDesign.propTypes = {};
+ResponsiveDesign.propTypes = {};

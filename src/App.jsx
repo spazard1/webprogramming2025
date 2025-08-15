@@ -1,10 +1,11 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import Home from "./Home";
+import Schedule from "./Schedule";
 import Assignments from "./Assignments/Assignments";
 import StretchLevels from "./StretchLevels";
 import { HelmetProvider } from "react-helmet-async";
 import assignments from "./Assignments/AssignmentsList";
+import Home from "./Home";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ const App = () => {
         <Container>
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/schedule">Schedule</Nav.Link>
             <NavDropdown title={"Assignments"} menuVariant="dark">
               {Object.keys(assignments).map((assignment, index) => (
                 <NavDropdown.Item
@@ -32,6 +34,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/schedule" element={<Schedule />} />
           <Route path="/assignments/:assignment" element={<Assignments />} />
           <Route path="/stretchLevels" element={<StretchLevels />} />
 

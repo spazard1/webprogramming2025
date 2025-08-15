@@ -9,7 +9,7 @@ import CloudStorage from "./CloudStorage";
 import IfMatch from "./IfMatch";
 import ApiVersioning from "./ApiVersioning";
 import JWT from "./JWT";
-import MobileResponsiveDesign from "./MobileResponsiveDesign";
+import ResponsiveDesign from "./ResponsiveDesign";
 
 const assignments = {
   HTMLCSSJavascript: {
@@ -56,9 +56,9 @@ const assignments = {
     title: "JWT",
     component: () => <JWT />,
   },
-  MobileResponsiveDesign: {
-    title: "Mobile Responsive Design",
-    component: () => <MobileResponsiveDesign />,
+  ResponsiveDesign: {
+    title: "Responsive Design",
+    component: () => <ResponsiveDesign />,
   },
 };
 

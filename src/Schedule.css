@@ -1,0 +1,55 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.importantLinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.classSchedulesContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 90vh;
+  gap: 0.5rem 1rem;
+}
+
+.classScheduleItem {
+  width: 50%;
+  height: 10vh;
+  border: 4px solid #111;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0;
+  background-color: #202020;
+}
+
+.classDate {
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.lecturesContainer {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.lecturesLinksContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .scheduleContainer {
+    width: 50%;
+  }
+}
