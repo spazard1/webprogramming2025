@@ -6,6 +6,7 @@ import StretchLevels from "./StretchLevels";
 import { HelmetProvider } from "react-helmet-async";
 import assignments from "./Assignments/AssignmentsList";
 import Home from "./Home";
+import TheQuest from "./TheQuest";
 
 import "./App.css";
 
@@ -28,6 +29,7 @@ const App = () => {
               ))}
             </NavDropdown>
             <Nav.Link href="/stretchLevels">Stretch Levels</Nav.Link>
+            <Nav.Link href="/theQuest">The Quest</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -37,6 +39,7 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/assignments/:assignment" element={<Assignments />} />
           <Route path="/stretchLevels" element={<StretchLevels />} />
+          <Route path="/theQuest" element={<TheQuest />} />
 
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>

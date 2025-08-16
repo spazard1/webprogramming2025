@@ -12,7 +12,7 @@ const Home = () => {
         <br />
         Tues 6-9 PM RC422
         <br />
-        Office Hours by appointment only
+        Office Hours: By appointment only
       </div>
       <div className="sectionContainer">
         <div className="sectionTitle">Books</div>

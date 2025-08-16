@@ -18,13 +18,13 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 60vw;
-  height: 90vh;
+  height: 50rem;
   gap: 0.5rem 1rem;
 }
 
 .classScheduleItem {
   width: 50%;
-  height: 10vh;
+  height: 5.5rem;
   border: 4px solid #111;
   border-radius: 10px;
   padding: 5px;

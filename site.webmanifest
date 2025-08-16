@@ -1,6 +1,6 @@
 {
-  "name": "Bethel Software Proccess",
-  "short_name": "bethesoftwareprocess",
+  "name": "Bethel Web Programming 2025",
+  "short_name": "Bethel Web Programming 2025",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,6 +14,6 @@
     }
   ],
   "theme_color": "#ffffff",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
