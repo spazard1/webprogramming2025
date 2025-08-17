@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 import "./App.css";
 
-function App() {
+const App = () => {
   const portNumber = 0; /* put your visual studio port number here */
   const mainUrl = "https://localhost:" + portNumber + "/api/images";
 
@@ -118,6 +118,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
