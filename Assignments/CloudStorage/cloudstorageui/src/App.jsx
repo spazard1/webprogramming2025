@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import "./App.css";
 
 function App() {
-  const portNumber = 44303; /* put your visual studio port number here */
+  const portNumber = 0; /* put your visual studio port number here */
   const mainUrl = "https://localhost:" + portNumber + "/api/images";
 
   const [error, setError] = useState();
