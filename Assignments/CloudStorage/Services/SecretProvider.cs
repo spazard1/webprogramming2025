@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace CloudStorage.Services
 {
@@ -11,7 +9,7 @@ namespace CloudStorage.Services
             this.keyVaultProvider = keyVaultProvider;
         }
 
-        private KeyVaultProvider keyVaultProvider;
+        private readonly KeyVaultProvider keyVaultProvider;
 
         public async Task<string> LoadSecretAsync(string secretName)
         {
@@ -20,7 +18,7 @@ namespace CloudStorage.Services
                 var secret = await this.keyVaultProvider.SecretClient.GetSecretAsync(secretName);
                 return secret.Value.Value;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
                 throw;

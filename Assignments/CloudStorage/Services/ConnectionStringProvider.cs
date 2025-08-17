@@ -1,6 +1,4 @@
-﻿using CloudStorage.Services;
-
-namespace CloudStorage.Services
+﻿namespace CloudStorage.Services
 {
     public class ConnectionStringProvider : IConnectionStringProvider
     {
@@ -12,8 +10,10 @@ namespace CloudStorage.Services
 
         public string ConnectionString { get; }
 
-        public string AccountKey {
-            get {
+        public string AccountKey
+        {
+            get
+            {
                 var startIndex = ConnectionString.IndexOf("AccountKey=") + "AccountKey=".Length;
                 var length = ConnectionString.IndexOf(";", startIndex) - startIndex;
                 return ConnectionString.Substring(startIndex, length);

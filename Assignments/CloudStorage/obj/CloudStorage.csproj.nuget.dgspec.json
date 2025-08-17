@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Azure.Data.Tables": {
               "target": "Package",
@@ -56,7 +56,7 @@
             },
             "Azure.Identity": {
               "target": "Package",
-              "version": "[1.15.0, )"
+              "version": "[1.14.2, )"
             },
             "Azure.Security.KeyVault.Secrets": {
               "target": "Package",
@@ -70,9 +70,17 @@
               "target": "Package",
               "version": "[9.0.3, )"
             },
+            "System.Diagnostics.DiagnosticSource": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
             "System.Linq.Async": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.8, )"
             }
           },
           "imports": [
@@ -94,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

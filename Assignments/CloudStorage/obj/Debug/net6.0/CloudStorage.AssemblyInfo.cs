@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudStorage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbb234f1c366d0202740f67ac5e9e8ea1a2e0bbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+966352897777b6a1253a98da2f3f7d17243ad0b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudStorage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudStorage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

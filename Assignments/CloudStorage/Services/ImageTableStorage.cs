@@ -1,14 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using CloudStorage.Models;
-using Azure.Storage.Blobs;
-using Azure.Storage.Sas;
-using Azure.Storage.Blobs.Specialized;
-using Azure.Storage;
-using Azure.Storage.Blobs.Models;
+﻿using Azure;
 using Azure.Data.Tables;
-using Azure;
+using Azure.Storage;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using Azure.Storage.Blobs.Specialized;
+using Azure.Storage.Sas;
+using CloudStorage.Models;
 using System.Text.RegularExpressions;
 
 namespace CloudStorage.Services
@@ -45,7 +42,7 @@ namespace CloudStorage.Services
             await imageTable.CreateIfNotExistsAsync();
             await blobContainerClient.CreateIfNotExistsAsync();
         }
-        
+
         public async Task<ImageModel> GetAsync(string id)
         {
             return await imageTable.GetEntityAsync<ImageModel>(this.userNameProvider.UserName, id);
@@ -149,7 +146,6 @@ namespace CloudStorage.Services
 
                     continuationToken = blobPage.ContinuationToken;
                 }
-
             } while (continuationToken != "");
         }
     }
