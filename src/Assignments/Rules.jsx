@@ -7,7 +7,7 @@ const rules = [
   "Error messages must be “in-page” i.e. no pop-ups or alerts.",
   "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission.",
   "All requests that submit a body to your server must have their entities validated with appropriate annotations, such as MinLength, Range, or Required.",
-  "The root path of your server must display the main page of your application.",
+  "The main page of your of your application must either be served from the server root path or use a client app in the same directory that can be started locally with npm.",
   "Service/data/model classes must not have any http, request, or response references.",
   "Controller entity classes must not be used directly to store data on the server; translate them into a model (data storage) class before saving the data. Conversely, controllers must not send any model classes to the user; translate them into controller entity classes before sending the response.",
   "All service class instances must be obtained using dependency injection.",
