@@ -108,12 +108,15 @@ const Home = () => {
           reputation.
         </div>
       </div>
-      <div className="sectionContent">
-        <div className="sectionTitle"></div>Final Exam The final exam will
-        involve each student being given a fully functioning web service
-        program. Each student will independently code review this program and
-        will be graded on their ability to make good comments on necessary
-        changes to the code based on the topics covered in this course.
+      <div>
+        <div className="sectionTitle">Final Exam</div>
+        <div className="sectionContent">
+          The final exam will involve each student being given a fully
+          functioning web service program. Each student will independently code
+          review this program and will be graded on their ability to make good
+          comments on necessary changes to the code based on the topics covered
+          in this course.
+        </div>
       </div>
       <div>
         <div className="sectionTitle">Institutional Policies</div>
@@ -122,7 +125,7 @@ const Home = () => {
           in a course, as well as dismissal from the university. Penalties are
           given at the discretion of the faculty member, and offenders will be
           referred to the associate provost of the College of Arts and Sciences.
-          (See Bethel University’s full policy on Academic Honesty in the
+          See Bethel University’s full policy on Academic Honesty in the
           catalog:{" "}
           <a
             href="https://catalog.bethel.edu/arts-sciences/general-information/academic-honesty/"
@@ -130,7 +133,7 @@ const Home = () => {
           >
             https://catalog.bethel.edu/arts-sciences/general-information/academic-honesty/
           </a>
-          ).
+          .
         </div>
       </div>
       <div>
