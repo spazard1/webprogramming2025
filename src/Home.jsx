@@ -90,18 +90,19 @@ const Home = () => {
       <div>
         <div className="sectionTitle">Assignments</div>
         <div className="sectionContent">
-          Assignments will be introduced on the Tuesday of each week and will be
-          due a week after the following Thursday. This means each assignment
-          must be completed in a maximum of nine days. All assignments will
-          primarily be creating new code projects or adding additional code to
-          existing projects. Late assignments are accepted for full credit up to
-          two weeks after their due date, but being repeatedly late will
-          negatively affect your reputation. Each assignment will have stretch
-          levels for those students who wish to push themselves beyond the
-          baseline level of the class. Often these stretch levels will include
-          topics not covered in class and will require outside investigation and
-          learning to complete. Students who succeed at these stretch levels
-          will be given extra reputation.
+          Assignments will be introduced on the Tuesday of each week along with
+          the coresponding lecture topic. They are usually due in one week, with
+          a couple exceptions for school breaks. Check the{" "}
+          <a href="/schedule">schedule</a> page for exact due dates. All
+          assignments will primarily be creating new code projects or adding
+          additional code to existing projects. Late assignments are accepted
+          for full credit up to two weeks after their due date, but being
+          repeatedly late will negatively affect your reputation. Each
+          assignment will have stretch levels for those students who wish to
+          push themselves beyond the baseline level of the class. Often these
+          stretch levels will include topics not covered in class and will
+          require outside investigation and learning to complete. Students who
+          succeed at these stretch levels will be given extra reputation.
         </div>
       </div>
       <div>

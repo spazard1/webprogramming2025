@@ -52,13 +52,13 @@ const StretchLevels = () => {
       <div className="title">Stretch Levels</div>
 
       <div>
-        All assignments offer stretch levels for an additional challenge.
-        Completing stretch levels gives you reputation bonuses.
+        All assignments offer two or more stretch levels for an additional
+        challenge and a reputation bonus.
       </div>
       <div>
-        In order to receive credit for a stretch level, you must register it in
-        your assignment. Here is how you can do that for HTML or React pages.
-        Using either of these methods does not break rule 1 for assignments.
+        In order to receive credit for a stretch level, you must register it on
+        the main page of your assignment. You can use the code below to do that
+        for HTML or React pages.
       </div>
 
       <div className="stretchLevelsExample">
