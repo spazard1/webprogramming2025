@@ -177,7 +177,7 @@ const TFHAsyncAwait = () => {
             <ol className="assignmentSectionSubContent">
               <li>
                 The URL to use for the request is
-                https://webprogrammingmario.azurewebsites.net/api/mario/
+                https://bethelwebprogrammingmario.azurewebsites.net/api/mario/
                 {"{move}"}.
               </li>
               <li>
