@@ -51,13 +51,19 @@ export default Assignment;
 
 Assignment.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   maxRuleNumber: PropTypes.number.isRequired,
   existingRuleNumber: PropTypes.number.isRequired,
-  stretchLevelOverview: PropTypes.string.isRequired,
+  stretchLevelOverview: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   stretchLevels: PropTypes.arrayOf(PropTypes.object),
 };

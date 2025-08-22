@@ -22,6 +22,7 @@ a {
   align-self: center;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 #root {
@@ -30,9 +31,28 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 60%;
+  width: 95%;
   margin-top: 3.5rem;
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+#root > div {
+  width: 100%;
+}
+
+a {
+  overflow-wrap: anywhere;
+  white-space: nowrap;
+}
+
+.navbar-nav a {
+  overflow-wrap: normal;
+}
+
+@media (min-width: 1000px) {
+  #root {
+    width: 60%;
+  }
 }

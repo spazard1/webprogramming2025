@@ -1,10 +1,14 @@
-import { useEffect } from "react";
-import "./StretchLevels.css";
+import { useCallback, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
+import copy from "copy-to-clipboard";
 
 import {
   registerStretchLevels,
   removeStretchLevels,
 } from "https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
+
+import "./StretchLevels.css";
 
 const exampleHtmlImport = `
     <script type="module">
@@ -47,8 +51,19 @@ const StretchLevels = () => {
     };
   }, []);
 
+  const copyText = useCallback((textToCopy, copiedMessageId) => {
+    copy(textToCopy);
+    const copiedMessage = document.getElementById(copiedMessageId);
+    if (copiedMessage) {
+      copiedMessage.classList.add("visible");
+      setTimeout(() => {
+        copiedMessage.classList.remove("visible");
+      }, 3000);
+    }
+  }, []);
+
   return (
-    <div>
+    <div className="stretchLevelsContainer">
       <div className="title">Stretch Levels</div>
 
       <div>
@@ -62,12 +77,30 @@ const StretchLevels = () => {
       </div>
 
       <div className="stretchLevelsExample">
-        HTML:
+        HTML:{" "}
+        <span className="copyToClipboardIcon" title="Copy to clipboard">
+          <FontAwesomeIcon
+            icon={faCopy}
+            onClick={() => copyText(exampleHtmlImport, "htmlCopiedMessage")}
+          />
+          <span className="copiedMessage" id="htmlCopiedMessage">
+            Copied to clipboard
+          </span>
+        </span>
         <pre>{exampleHtmlImport}</pre>
       </div>
 
       <div className="stretchLevelsExample">
-        React components:
+        React components:{" "}
+        <span className="copyToClipboardIcon" title="Copy to clipboard">
+          <FontAwesomeIcon
+            icon={faCopy}
+            onClick={() => copyText(exampleReactImport, "reactCopiedMessage")}
+          />
+          <span className="copiedMessage" id="reactCopiedMessage">
+            Copied to clipboard
+          </span>
+        </span>
         <pre>{exampleReactImport}</pre>
       </div>
     </div>

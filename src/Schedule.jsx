@@ -122,7 +122,9 @@ const Schedule = () => {
   );
 
   return (
-    <>
+    <div>
+      <div className="title">Schedule</div>
+
       <div className="classSchedulesContainer">
         {schedules.map((schedule) => (
           <div className="classScheduleItem" key={schedule.date}>
@@ -163,7 +165,7 @@ const Schedule = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
