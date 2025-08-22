@@ -19,14 +19,15 @@ const CloudStorage = () => {
           <br />
           The base code for this assignment is provided for you at{" "}
           <a
-            href="https://github.com/spazard1/webprogramming2025/tree/main/Assignments/CloudStorage"
+            href="https://github.com/spazard1/webprogramming2025/"
             target="_blank"
           >
-            https://github.com/spazard1/webprogramming2025/tree/main/Assignments/CloudStorage
-          </a>
-          . Your work for this assignment will be to turn this project into a
-          finished application. The code contains many TODO{"'"}s to give you
-          hints on where you need to make changes.
+            https://github.com/spazard1/webprogramming2025/
+          </a>{" "}
+          in the Assignments/CloudStorage folder. Your work for this assignment
+          will be to turn this project into a finished application. The code
+          contains many TODO{"'"}s to give you hints on where you need to make
+          changes.
           <br />
           <br />
           Staying on track with this assignment will set you up for future

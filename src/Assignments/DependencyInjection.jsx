@@ -6,22 +6,31 @@ const DependencyInjection = () => {
       title="Dependency Injection"
       maxRuleNumber={8}
       existingRuleNumber={7}
-      description={`
-            Your next assignment is full of dependencies and hobbits. Frodo and
-            Sam are dependent on Aragorn and the humans distracting Sauron.
-            Gondor is dependent on help from Rohan. You are dependent on the
-            code from GitHub. You will need to download all of the code in the
-            assignment folder. The server folder contains all of the code you
-            will be editing for this assignment. The wwwroot folder contains
-            some helper HTML and JavaScript to test your server code.
-            There are four bad service dependencies in the assignment code that
-            you will need to update.
-`}
-      stretchLevelOverview={`
-            If you already have a lot of experience with dependency injection,
-            or if you just want to go hunt some orc, try to complete these
-            stretch levels for a reputation bonus.
-`}
+      description={
+        <>
+          Your next assignment is full of dependencies and hobbits. Frodo and
+          Sam are dependent on Aragorn and the humans distracting Sauron. Gondor
+          is dependent on help from Rohan. You are dependent on the code from
+          GitHub found at{" "}
+          <a
+            href="https://github.com/spazard1/WebProgramming2025/"
+            target="_blank"
+          >
+            https://github.com/spazard1/WebProgramming2025/
+          </a>{" "}
+          in the Assignments/DependencyInjection folder. This is a project that
+          has four services that need to be updated to use dependency injection.
+          The wwwroot folder of the project contains some helper HTML and
+          JavaScript to test your server code.
+        </>
+      }
+      stretchLevelOverview={
+        <>
+          If you already have a lot of experience with dependency injection, or
+          if you just want to go hunt some orc, try to complete these stretch
+          levels for a reputation bonus.
+        </>
+      }
       stretchLevels={[
         {
           title: "Gandalf Level",
