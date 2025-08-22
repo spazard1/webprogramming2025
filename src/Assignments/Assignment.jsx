@@ -18,8 +18,9 @@ const Assignment = ({
       <Helmet>
         <title>Bethel Web Programming - {title}</title>
       </Helmet>
+      <div className="title">{title}</div>
+
       <div className="assignmentContainer">
-        <div className="title">{title}</div>
         <div className="assignmentDescription">{description}</div>
 
         <div className="assignmentContentContainer">{children}</div>
@@ -51,10 +52,7 @@ export default Assignment;
 
 Assignment.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
