@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Assignment from "./Assignment";
 
 const WebRequests = () => {
@@ -5,7 +6,14 @@ const WebRequests = () => {
     <Assignment
       title="Web Requests"
       description={
-        'We have arrived at the next assignment. In this assignment, you will be making several different web requests to a server using javascript. The server endpoint you will be using is "https://bethelwebrequestsserver.azurewebsites.net/api/favoritecharacters/". You do not need to write any server-side code for this assignment. All references to the server in this assignment are already written for you and deployed to Azure at the above endpoint URL. Your requirement is only the client-side javascript. The force will be with you, always.'
+        <>
+          Difficult to see; always in motion is the future. In this assignment,
+          you will be making several different web requests to a server using
+          javascript. The server endpoint you will be using is
+          "https://bethelwebrequestsserver.azurewebsites.net/api/favoritecharacters/".
+          You do not need to write any server-side code for this assignment. The
+          force will be with you, always.
+        </>
       }
       maxRuleNumber={3}
       existingRuleNumber={3}
