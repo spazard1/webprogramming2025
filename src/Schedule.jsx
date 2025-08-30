@@ -11,6 +11,10 @@ const Schedule = () => {
       },
       {
         date: "September 9",
+        announcement: "No class - Steven out of town",
+      },
+      {
+        date: "September 16",
         lectures: ["Web Requests"],
         assignment: {
           url: "/assignments/HTMLCSSJavascript",
@@ -18,7 +22,7 @@ const Schedule = () => {
         },
       },
       {
-        date: "September 16",
+        date: "September 23",
         lectures: ["Web API"],
         assignment: {
           url: "/assignments/WebRequests",
@@ -26,7 +30,7 @@ const Schedule = () => {
         },
       },
       {
-        date: "September 23",
+        date: "September 30",
         lectures: ["Dependency Injection"],
         assignment: {
           url: "/assignments/WebApi",
@@ -34,16 +38,12 @@ const Schedule = () => {
         },
       },
       {
-        date: "September 30",
+        date: "October 7",
         lectures: ["TFH async/await"],
         assignment: {
           url: "/assignments/DependencyInjection",
           title: "Dependency Injection",
         },
-      },
-      {
-        date: "October 7",
-        annoucement: "Fall break",
       },
       {
         date: "October 14",
@@ -115,7 +115,7 @@ const Schedule = () => {
       },
       {
         date: "December 16",
-        annoucement: "Final Exam",
+        announcement: "Final Exam",
       },
     ],
     []
@@ -156,9 +156,9 @@ const Schedule = () => {
                   </a>
                 </div>
               )}
-              {schedule.annoucement && (
-                <div className="scheduleAnnoucementContainer">
-                  {schedule.annoucement}
+              {schedule.announcement && (
+                <div className="scheduleAnnouncementContainer">
+                  {schedule.announcement}
                 </div>
               )}
             </div>
