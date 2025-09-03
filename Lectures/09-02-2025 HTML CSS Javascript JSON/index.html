@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>First HTML Lecture</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    Some text. White space is ignored.
+
+    <div>
+      <textarea id="userInput">{"color": "purple"}</textarea>
+      <input id="parseButton" type="button" value="Parse!" />
+    </div>
+
+    <div id="error" class="error"></div>
+
+    <div id="firstDiv">This is in a div tag.</div>
+    <div class="colorLimeGreen big">
+      This is in a second div tag.
+
+      <a href="https://www.google.com" target="_blank">Google</a>
+    </div>
+
+    Body text, the span will be inline.
+    <span>This is in a span tag.</span>
+
+    What if I want line breaks?
+
+    <br /><br />
+    CSS Precedence Rules (from least to most)
+    <ol>
+      <li style="color: red">Element selector (body, div, li, etc.)</li>
+      <li>Class selector (uses .) by FAR the most common selector</li>
+      <li>ID selector (uses #)</li>
+      <li>style attribute (this breaks rule 1 in assignments!)</li>
+      <li>!important</li>
+    </ol>
+
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+    <p>paragraph, like a div, but with an automatic line break.</p>
+  </body>
+</html>
