@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useMemo } from "react";
 
 import "./Schedule.css";
@@ -7,7 +8,12 @@ const Schedule = () => {
     () => [
       {
         date: "September 2",
-        lectures: ["HTML/CSS/Javascript/JSON"],
+        lectures: [
+          {
+            title: "HTML/CSS/Javascript/JSON",
+            url: "https://youtu.be/N8d32ay-aFo",
+          },
+        ],
       },
       {
         date: "September 9",
@@ -124,6 +130,23 @@ const Schedule = () => {
   return (
     <div>
       <div className="title">Schedule</div>
+      <div className="lectureCodeHeader">
+        All lecture code is available at{" "}
+        <a
+          href="https://github.com/spazard1/webprogramming2025"
+          target="_blank"
+        >
+          github.com/spazard1/webprogramming2025
+        </a>{" "}
+        in the "Lectures" folder. Lecture recordings are available as a{" "}
+        <a
+          href="https://www.youtube.com/playlist?list=PLar83IIzEy4qLw_guP9xIeQXolyaEqRVm"
+          target="_blank"
+        >
+          YouTube playlist
+        </a>{" "}
+        or linked directly in the schedule on this page.
+      </div>
 
       <div className="classSchedulesContainer">
         {schedules.map((schedule) => (
@@ -140,7 +163,9 @@ const Schedule = () => {
                       <div key={index}>
                         {typeof lecture === "string" && <>{lecture}</>}
                         {typeof lecture !== "string" && (
-                          <a href={lecture.url}>{lecture.title}</a>
+                          <a href={lecture.url} target="_blank">
+                            {lecture.title}
+                          </a>
                         )}
                       </div>
                     ))}
