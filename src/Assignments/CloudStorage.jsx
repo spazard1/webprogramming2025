@@ -6,6 +6,7 @@ const CloudStorage = () => {
       title="Cloud Storage"
       maxRuleNumber={9}
       existingRuleNumber={9}
+      videoLink={"https://www.youtube.com/watch?v=J6uRPkDzwXo"}
       description={
         <>
           You’re at tribal council, not sure if you can trust everyone who is

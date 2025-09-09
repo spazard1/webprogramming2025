@@ -6,6 +6,7 @@ const JWT = () => {
       title="JWT"
       maxRuleNumber={10}
       existingRuleNumber={10}
+      videoLink={"https://www.youtube.com/watch?v=UmbdLoDC1l0"}
       description={`You are approaching another test chamber. Cake and grief counseling will be available at the conclusion of the assignment. There is a good chance that the cake is a lie. In this assignment you will be using JWT to validate requests against a server. Most of the JWT generation and validation code is provided for you. Your job is to use it in your controllers, filters, and javascript.
 
 This assignment will have one WebApi project with two controllers and an html page with javascript that will make requests to the controllers. The javascript must keep track of a current JWT that can be sent along with requests to the server.`}

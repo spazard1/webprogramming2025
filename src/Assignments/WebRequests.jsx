@@ -17,6 +17,7 @@ const WebRequests = () => {
       }
       maxRuleNumber={3}
       existingRuleNumber={3}
+      videoLink={"https://www.youtube.com/watch?v=wlsUaap_i0o"}
       stretchLevelOverview={
         "If you already have a lot of experience with javascript web requests or feel that the force is with you, try to complete these stretch levels for a reputation bonus."
       }

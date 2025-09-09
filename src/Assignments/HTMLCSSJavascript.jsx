@@ -9,6 +9,7 @@ const HTMLCSSJavascript = () => {
       }
       maxRuleNumber={3}
       existingRuleNumber={0}
+      videoLink={"https://www.youtube.com/watch?v=Fd9uFOTODG8"}
       stretchLevelOverview={
         "If you already have a lot of experience with HTML and CSS or you just like superheroes as much as me, try to complete these stretch levels for a reputation bonus."
       }

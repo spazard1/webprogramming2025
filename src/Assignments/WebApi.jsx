@@ -7,6 +7,7 @@ const WebApi = () => {
       description={`In this assignment, we will be returning to Star Wars. “I think my eyes are getting better. Instead of a big dark blur, I’m seeing a big bright blur.” In the web requests assignment, you wrote javascript that communicated with a server that was hosted on Azure. In this assignment, you’ll be recreating that server. You’ll be able to use your previous assignment code to test your new server. Also, the server from that assignment is still deployed to Azure at "https://webrequestsserverbethel.azurewebsites.net/api/favoritecharacters" so you can verify if your server is acting in the same way. Your server will be tracking a list of people and their favorite Star Wars characters. Your server does not need to persist any data, so it is okay if data is lost when your server is stopped.`}
       maxRuleNumber={7}
       existingRuleNumber={3}
+      videoLink={"https://www.youtube.com/watch?v=wlsUaap_i0o"}
       stretchLevelOverview={
         <>
           If you already have some experience with WebApi, or if you aren’t

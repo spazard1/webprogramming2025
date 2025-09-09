@@ -7,6 +7,7 @@ import "./Assignment.css";
 const Assignment = ({
   title,
   description,
+  videoLink,
   children,
   maxRuleNumber,
   existingRuleNumber,
@@ -22,6 +23,16 @@ const Assignment = ({
 
       <div className="assignmentContainer">
         <div className="assignmentDescription">{description}</div>
+
+        {videoLink && (
+          <div className="sectionHeader">
+            Watch an overview of this assignment at{" "}
+            <a href={videoLink} target="_blank">
+              {videoLink}
+            </a>
+            .
+          </div>
+        )}
 
         <div className="assignmentContentContainer">{children}</div>
         <Rules
@@ -53,6 +64,7 @@ export default Assignment;
 Assignment.propTypes = {
   title: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  videoLink: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

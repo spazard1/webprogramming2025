@@ -6,6 +6,7 @@ const ResponsiveDesign = () => {
       title="Responsive Design"
       maxRuleNumber={10}
       existingRuleNumber={10}
+      videoLink={"https://www.youtube.com/watch?v=aXSP7fHwhqE"}
       description={`Your third Survivor season is about to begin. (The show Survivor has been on for almost 50 seasons; and yes, I’ve seen them all.) In this assignment you will finish your development of the Cloud Storage and Api Versioning project by making it compatible with mobile and responsive design. That means supporting different screen sizes and making elements behave as the user would expect when actions on the page are loading.`}
       stretchLevelOverview={`If you already have a lot of experience with mobile development, or if you just played Survivor for the third time, try to complete these stretch levels for a reputation bonus.`}
       stretchLevels={[

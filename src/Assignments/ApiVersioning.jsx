@@ -6,6 +6,7 @@ const ApiVersioning = () => {
       title="Api Versioning"
       maxRuleNumber={10}
       existingRuleNumber={9}
+      videoLink={"https://www.youtube.com/watch?v=qW1ciSCsIEI"}
       description={`It’s time to return to Survivor. Many have had the opportunity to play more than once, and there are some who have played four times. Just like the returning players of Survivor have learned from the mistakes of their first plays, hopefully you have learned from your past assignments. In this revisiting of the cloud storage assignment, you will add a new field to your controller and React, but must also support the existing version from the previous assignment at the same time.`}
       stretchLevelOverview={`If you already have a lot of experience with api versioning, or if you just won Survivor for the second time (only two people have ever done this!), try to complete these stretch levels for a reputation bonus.`}
       stretchLevels={[

@@ -6,6 +6,7 @@ const React = () => {
       title="React"
       maxRuleNumber={9}
       existingRuleNumber={9}
+      videoLink={"https://www.youtube.com/watch?v=R18Drrxoz5w"}
       description={
         <>
           Water. Earth. Fire. Air. <br />

@@ -6,6 +6,7 @@ const DependencyInjection = () => {
       title="Dependency Injection"
       maxRuleNumber={8}
       existingRuleNumber={7}
+      videoLink={"https://www.youtube.com/watch?v=Y3sj1S5JSmA"}
       description={
         <>
           Your next assignment is full of dependencies and hobbits. Frodo and

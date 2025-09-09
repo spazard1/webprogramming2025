@@ -6,6 +6,7 @@ const Queues = () => {
       title="Queues"
       maxRuleNumber={9}
       existingRuleNumber={9}
+      videoLink="https://www.youtube.com/watch?v=9QuzaBBL75M"
       description={
         <>
           All peasants seem to do is work. Never a break even when they deserve
@@ -85,18 +86,21 @@ const Queues = () => {
       </div>
 
       <div className="assignmentSectionContainer">
-        <div className="assignmentSectionTitle">(10 Points) Html/Javascript</div>
+        <div className="assignmentSectionTitle">
+          (10 Points) Html/Javascript
+        </div>
         <ol>
           <li>
             Create a simple html page that allows a user to enter an integer and
-            send it to your controller. Display errors and successes
-            as normal.
+            send it to your controller. Display errors and successes as normal.
           </li>
         </ol>
       </div>
 
       <div className="assignmentSectionContainer">
-        <div className="assignmentSectionTitle">(20 Points) Queue Service (Queue the work)</div>
+        <div className="assignmentSectionTitle">
+          (20 Points) Queue Service (Queue the work)
+        </div>
         <ol>
           <li>
             Create a service that queues several JSON messages. The service will
@@ -137,7 +141,9 @@ const Queues = () => {
       </div>
 
       <div className="assignmentSectionContainer">
-        <div className="assignmentSectionTitle">(40 Points) Console application (Do the work)</div>
+        <div className="assignmentSectionTitle">
+          (40 Points) Console application (Do the work)
+        </div>
         <ol>
           <li>
             Create a console application that reads from the queue from step 1.
@@ -189,7 +195,9 @@ const Queues = () => {
       </div>
 
       <div className="assignmentSectionContainer">
-        <div className="assignmentSectionTitle">(20 Points) Code style, formatting, completeness, and quality.</div>
+        <div className="assignmentSectionTitle">
+          (20 Points) Code style, formatting, completeness, and quality.
+        </div>
         <ol>
           <li>
             AWS accounts are free for the first one million requests. Create
