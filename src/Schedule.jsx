@@ -128,7 +128,7 @@ const Schedule = () => {
   );
 
   return (
-    <div>
+    <div className="contentContainer">
       <div className="title">Schedule</div>
       <div className="lectureCodeHeader">
         All lecture code is available at{" "}

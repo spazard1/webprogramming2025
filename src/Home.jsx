@@ -2,7 +2,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="contentContainer">
       <div className="title">Bethel Web Programming FA2025</div>
 
       <div className="homeContainer">
@@ -110,7 +110,8 @@ const Home = () => {
             the class. Often these stretch levels will include topics not
             covered in class and will require outside investigation and learning
             to complete. Students who succeed at these stretch levels will be
-            given extra reputation.
+            given extra reputation. Assignments should be zipped into a single
+            file and then submitted on Moodle.
           </div>
         </div>
         <div>

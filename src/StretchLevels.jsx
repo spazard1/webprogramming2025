@@ -14,13 +14,13 @@ const exampleHtmlImport = `
     <script type="module">
       import { registerStretchLevels } from "https://spazard1.github.io/webprogramming2025/src/stretchLevels.module.js";
 
-      window.onload = () => {
+      window.addEventListener("load", () => {
         registerStretchLevels([
           "Purple Lightsaber Level",
           "Green Lightsaber Level",
           "Blue Lightsaber Level"
         ]);
-      };
+      });
     </script>`;
 
 const exampleReactImport = `
@@ -63,45 +63,47 @@ const StretchLevels = () => {
   }, []);
 
   return (
-    <div className="stretchLevelsContainer">
-      <div className="title">Stretch Levels</div>
+    <div className="contentContainer">
+      <div className="stretchLevelsContainer">
+        <div className="title">Stretch Levels</div>
 
-      <div>
-        All assignments offer two or more stretch levels for an additional
-        challenge and a reputation bonus.
-      </div>
-      <div>
-        In order to receive credit for a stretch level, you must register it on
-        the main page of your assignment. You can use the code below to do that
-        for HTML or React pages.
-      </div>
+        <div>
+          All assignments offer two or more stretch levels for an additional
+          challenge and a reputation bonus.
+        </div>
+        <div>
+          In order to receive credit for a stretch level, you must register it
+          on the main page of your assignment. You can use the code below to do
+          that for HTML or React pages.
+        </div>
 
-      <div className="stretchLevelsExample">
-        HTML:{" "}
-        <span className="copyToClipboardIcon" title="Copy to clipboard">
-          <FontAwesomeIcon
-            icon={faCopy}
-            onClick={() => copyText(exampleHtmlImport, "htmlCopiedMessage")}
-          />
-          <span className="copiedMessage" id="htmlCopiedMessage">
-            Copied to clipboard
+        <div className="stretchLevelsExample">
+          HTML:{" "}
+          <span className="copyToClipboardIcon" title="Copy to clipboard">
+            <FontAwesomeIcon
+              icon={faCopy}
+              onClick={() => copyText(exampleHtmlImport, "htmlCopiedMessage")}
+            />
+            <span className="copiedMessage" id="htmlCopiedMessage">
+              Copied to clipboard
+            </span>
           </span>
-        </span>
-        <pre>{exampleHtmlImport}</pre>
-      </div>
+          <pre>{exampleHtmlImport}</pre>
+        </div>
 
-      <div className="stretchLevelsExample">
-        React components:{" "}
-        <span className="copyToClipboardIcon" title="Copy to clipboard">
-          <FontAwesomeIcon
-            icon={faCopy}
-            onClick={() => copyText(exampleReactImport, "reactCopiedMessage")}
-          />
-          <span className="copiedMessage" id="reactCopiedMessage">
-            Copied to clipboard
+        <div className="stretchLevelsExample">
+          React components:{" "}
+          <span className="copyToClipboardIcon" title="Copy to clipboard">
+            <FontAwesomeIcon
+              icon={faCopy}
+              onClick={() => copyText(exampleReactImport, "reactCopiedMessage")}
+            />
+            <span className="copiedMessage" id="reactCopiedMessage">
+              Copied to clipboard
+            </span>
           </span>
-        </span>
-        <pre>{exampleReactImport}</pre>
+          <pre>{exampleReactImport}</pre>
+        </div>
       </div>
     </div>
   );

@@ -3,15 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0.1px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .transparentBox {
@@ -19,6 +14,7 @@ body {
   border: 5px solid rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 10px;
+  width: 50%;
 }
 
 .notransition * {
@@ -35,7 +31,6 @@ body {
   justify-content: center;
   width: 100%;
   padding: 0;
-  margin-top: 1rem;
 }
 
 .player {
@@ -116,31 +111,27 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-  .players {
-    margin-top: 2rem;
-  }
-
   .player {
-    width: 20rem;
-    height: 20rem;
-  }
-
-  .playerName {
-    font-size: 1.4rem;
-    padding: 2rem;
-    margin: 0;
-    top: 3rem;
-    left: 3rem;
     width: 14rem;
     height: 14rem;
   }
 
+  .playerName {
+    font-size: 1rem;
+    padding: 2rem;
+    margin: 0;
+    top: 2rem;
+    left: 2rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
   :root {
-    --progressDiv-radius: -7rem;
+    --progressDiv-radius: 5rem;
   }
 
   .progressDiv {
-    width: 5rem;
-    height: 5rem;
+    width: 3.25rem;
+    height: 3.25rem;
   }
 }

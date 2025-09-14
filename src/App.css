@@ -11,7 +11,12 @@ html {
 body {
   color: white;
   background-color: #242424;
-  padding: 0.5rem;
+  padding: 0.1rem;
+  min-height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 a {
@@ -25,7 +30,7 @@ a {
   margin-bottom: 0.5rem;
 }
 
-#root {
+.contentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,10 +43,6 @@ a {
   margin-right: auto;
 }
 
-#root > div {
-  width: 100%;
-}
-
 a {
   overflow-wrap: anywhere;
   white-space: nowrap;
@@ -52,7 +53,7 @@ a {
 }
 
 @media (min-width: 1000px) {
-  #root {
+  .contentContainer {
     width: 60%;
   }
 }

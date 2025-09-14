@@ -10,8 +10,10 @@ const Assignments = () => {
   const AssignmentComponent = assignments[assignment].component;
 
   return (
-    <div className="assignmentsContainer">
-      {assignments[assignment] && <AssignmentComponent />}
+    <div className="contentContainer">
+      <div className="assignmentsContainer">
+        {assignments[assignment] && <AssignmentComponent />}
+      </div>
     </div>
   );
 };

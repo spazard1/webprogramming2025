@@ -44,9 +44,11 @@ const TheQuest = () => {
 
     getPlayerStatusesCount.current++;
 
-    axios.get("https://webprogrammingthequest-gdhwe6ghd3enbghr.westus3-01.azurewebsites.net/api/status").then((response) => {
-      setPlayerStatuses(response.data);
-    });
+    axios
+      .get("https://server.webprogrammingthequest.net/api/status")
+      .then((response) => {
+        setPlayerStatuses(response.data);
+      });
   }, []);
 
   const pauseAnimations = useCallback(() => {
