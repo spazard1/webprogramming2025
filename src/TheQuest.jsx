@@ -37,6 +37,7 @@ const TheQuest = () => {
   const { queryString, setQueryString } = useSignalRConnection();
   const [name, setName] = useState(localStorage.getItem("name"));
   const [password, setPassword] = useState(localStorage.getItem("password"));
+  const [playerFlashTimeouts, setPlayerFlashTimeouts] = useState({});
 
   const getPlayerStatuses = useCallback(() => {
     if (document.visibilityState !== "visible") {
@@ -81,12 +82,28 @@ const TheQuest = () => {
     setQueryString("name=" + name + "&password=" + password);
   }, [queryString, setQueryString, name, password]);
 
-  const questRequestCallback = useCallback((qr) => {
-    document.getElementById(qr.name + "_path").innerHTML = qr.path;
-    document.getElementById(qr.name + "_pathTime").innerHTML = new Date(
-      qr.pathTime
-    ).toLocaleString();
-  }, []);
+  const questRequestCallback = useCallback(
+    (qr) => {
+      clearTimeout(playerFlashTimeouts[qr.name]);
+
+      const newPlayerFlashTimeouts = { ...playerFlashTimeouts };
+      newPlayerFlashTimeouts[qr.name] = setTimeout(() => {
+        document
+          .getElementById(qr.name + "_pathContainer")
+          .classList.remove("playerPathFlash");
+      }, 2500);
+      setPlayerFlashTimeouts(newPlayerFlashTimeouts);
+
+      document.getElementById(qr.name + "_path").innerHTML = qr.path;
+      document
+        .getElementById(qr.name + "_pathContainer")
+        .classList.add("playerPathFlash");
+      document.getElementById(qr.name + "_pathTime").innerHTML = new Date(
+        qr.pathTime
+      ).toLocaleString();
+    },
+    [playerFlashTimeouts]
+  );
 
   useSignalR("QuestRequest", questRequestCallback);
 
@@ -139,14 +156,22 @@ const TheQuest = () => {
           >
             <div className="playerName">{playerStatus.name}</div>
             <div className="transparentCircle"></div>
-            <div id={playerStatus.name + "_path"} className="playerPath">
-              {playerStatus.path}
-            </div>
-            {playerStatus.pathTime && (
-              <div id={playerStatus.name + "_pathTime"} className="playerPath">
-                {new Date(playerStatus.pathTime).toLocaleString()}
+            <div
+              id={playerStatus.name + "_pathContainer"}
+              className="playerPathContainer"
+            >
+              <div id={playerStatus.name + "_path"} className="playerPath">
+                {playerStatus.path}
               </div>
-            )}
+              {playerStatus.pathTime && (
+                <div
+                  id={playerStatus.name + "_pathTime"}
+                  className="playerPath"
+                >
+                  {new Date(playerStatus.pathTime).toLocaleString()}
+                </div>
+              )}
+            </div>
             <div
               className={classNames("progressElements", {
                 step9: playerStatus["step9"],
