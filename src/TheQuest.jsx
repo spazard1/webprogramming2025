@@ -50,7 +50,12 @@ const TheQuest = () => {
 
     getPlayerStatusesCount.current++;
 
-    axios.get(serverUrl + "api/status").then((response) => {
+    let path = serverUrl + "api/status";
+    if (localStorage.getItem("password")) {
+      path += "?password=" + localStorage.getItem("password");
+    }
+
+    axios.get(path).then((response) => {
       setPlayerStatuses(response.data);
     });
   }, []);
@@ -78,6 +83,9 @@ const TheQuest = () => {
 
   const questRequestCallback = useCallback((qr) => {
     document.getElementById(qr.name + "_path").innerHTML = qr.path;
+    document.getElementById(qr.name + "_pathTime").innerHTML = new Date(
+      qr.pathTime
+    ).toLocaleString();
   }, []);
 
   useSignalR("QuestRequest", questRequestCallback);
@@ -134,9 +142,11 @@ const TheQuest = () => {
             <div id={playerStatus.name + "_path"} className="playerPath">
               {playerStatus.path}
             </div>
-            <div id={playerStatus.name + "_path"} className="playerPath">
-              {playerStatus.pathTime}
-            </div>
+            {playerStatus.pathTime && (
+              <div id={playerStatus.name + "_pathTime"} className="playerPath">
+                {new Date(playerStatus.pathTime).toLocaleString()}
+              </div>
+            )}
             <div
               className={classNames("progressElements", {
                 step9: playerStatus["step9"],
