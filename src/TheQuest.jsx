@@ -65,6 +65,7 @@ const TheQuest = () => {
 
   useEffect(() => {
     setName(localStorage.getItem("name"));
+    setPassword(localStorage.getItem("password"));
   }, []);
 
   useEffect(() => {
