@@ -1,0 +1,26 @@
+GET https://myserver.net/api/students
+    a list of all students
+
+GET https://myserver.net/api/students/5301
+    a student with the id 5301
+
+GET https://myserver.net/api/students/5301/address
+    a list of all addresses for the student with id 5301
+
+GET https://myserver.net/api/students/5301/address/2
+    a specific address for the student with id 5301
+
+POST https://myserver.net/api/students
+    create a new student
+
+POST https://myserver.net/api/students/5301/address
+    create a new address for the student with id 5301
+
+GET https://myserver.net/api/students?firstName=steven
+    a list of all students who have the first name steven
+
+GET https://myserver.net/api/students?firstName=steven&lastName=yackel
+    a list of all students who have the first name steven and last name yackel
+
+
+

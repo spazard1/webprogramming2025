@@ -11,6 +11,9 @@ import step6 from "./step6.jpg";
 import step7 from "./step7.jpg";
 import step8 from "./step8.jpg";
 import step10 from "./step10.jpg";
+import serverUrl from "./ServerUrl.jsx";
+import useSignalRConnection from "./signalr/useSignalRConnection.jsx";
+import useSignalR from "./signalr/useSignalR.jsx";
 
 import "./TheQuest.css";
 
@@ -31,6 +34,9 @@ const TheQuest = () => {
   const getPlayerStatusesInterval = useRef();
   const getPlayerStatusesCount = useRef(0);
   const [paused, setPaused] = useState(false);
+  const { queryString, setQueryString } = useSignalRConnection();
+  const [name, setName] = useState(localStorage.getItem("name"));
+  const [password, setPassword] = useState(localStorage.getItem("password"));
 
   const getPlayerStatuses = useCallback(() => {
     if (document.visibilityState !== "visible") {
@@ -44,11 +50,9 @@ const TheQuest = () => {
 
     getPlayerStatusesCount.current++;
 
-    axios
-      .get("https://server.webprogrammingthequest.net/api/status")
-      .then((response) => {
-        setPlayerStatuses(response.data);
-      });
+    axios.get(serverUrl + "api/status").then((response) => {
+      setPlayerStatuses(response.data);
+    });
   }, []);
 
   const pauseAnimations = useCallback(() => {
@@ -58,6 +62,25 @@ const TheQuest = () => {
       setPaused(true);
     }
   }, []);
+
+  useEffect(() => {
+    setName(localStorage.getItem("name"));
+    setPassword(localStorage.getItem("password"));
+  }, []);
+
+  useEffect(() => {
+    if (!name || !password) {
+      return;
+    }
+
+    setQueryString("name=" + name + "&password=" + password);
+  }, [queryString, setQueryString, name, password]);
+
+  const questRequestCallback = useCallback((qr) => {
+    document.getElementById(qr.name + "_path").innerHTML = qr.path;
+  }, []);
+
+  useSignalR("QuestRequest", questRequestCallback);
 
   useEffect(() => {
     document.addEventListener("visibilitychange", pauseAnimations);
@@ -106,7 +129,9 @@ const TheQuest = () => {
                 360 / (playerStatus.finishedStepsCount ?? 1) + "deg",
             }}
           >
-            <div className="playerName transparentBox">{playerStatus.name}</div>
+            <div className="playerName">{playerStatus.name}</div>
+            <div className="transparentCircle"></div>
+            <div id={playerStatus.name + "_path"} className="playerPath"></div>
             <div
               className={classNames("progressElements", {
                 step9: playerStatus["step9"],

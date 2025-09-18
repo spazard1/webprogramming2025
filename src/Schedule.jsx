@@ -21,7 +21,16 @@ const Schedule = () => {
       },
       {
         date: "September 16",
-        lectures: ["Web Requests"],
+        lectures: [
+          {
+            title: "Web Requests",
+            url: "https://www.youtube.com/watch?v=IsGLJ-MIpY4",
+          },
+          {
+            title: "Web Requests",
+            url: "https://www.youtube.com/watch?v=w-lFWoSVero",
+          },
+        ],
         assignment: {
           url: "/assignments/HTMLCSSJavascript",
           title: "HTML/CSS/Javascript",
@@ -161,11 +170,25 @@ const Schedule = () => {
                   <div className="lecturesLinksContainer">
                     {schedule?.lectures?.map((lecture, index) => (
                       <div key={index}>
-                        {typeof lecture === "string" && <>{lecture}</>}
-                        {typeof lecture !== "string" && (
-                          <a href={lecture.url} target="_blank">
-                            {lecture.title}
-                          </a>
+                        {index === 0 && (
+                          <>
+                            {typeof lecture === "string" && <>{lecture}</>}
+                            {typeof lecture !== "string" && (
+                              <a href={lecture.url} target="_blank">
+                                {lecture.title}
+                              </a>
+                            )}
+                          </>
+                        )}
+                        {index > 0 && (
+                          <>
+                            {typeof lecture === "string" && <>{lecture}</>}
+                            {typeof lecture !== "string" && (
+                              <a href={lecture.url} target="_blank">
+                                Part {index + 1}
+                              </a>
+                            )}
+                          </>
                         )}
                       </div>
                     ))}
