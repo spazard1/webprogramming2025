@@ -131,7 +131,12 @@ const TheQuest = () => {
           >
             <div className="playerName">{playerStatus.name}</div>
             <div className="transparentCircle"></div>
-            <div id={playerStatus.name + "_path"} className="playerPath"></div>
+            <div id={playerStatus.name + "_path"} className="playerPath">
+              {playerStatus.path}
+            </div>
+            <div id={playerStatus.name + "_path"} className="playerPath">
+              {playerStatus.pathTime}
+            </div>
             <div
               className={classNames("progressElements", {
                 step9: playerStatus["step9"],
