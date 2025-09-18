@@ -10,6 +10,7 @@ import TheQuest from "./TheQuest";
 import OfficeHours from "./OfficeHours";
 import { useState } from "react";
 import SignalRConnectionContext from "./signalr/SignalRConnectionContext.jsx";
+import SignalRConnectionStatus from "./signalr/SignalRConnectionStatus.jsx";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ const App = () => {
     <SignalRConnectionContext.Provider
       value={{ connection, setConnection, connectionId, setConnectionId }}
     >
+      <SignalRConnectionStatus />
       <HelmetProvider>
         <Navbar bg="dark" variant="dark" fixed="top" expand="lg">
           <Container>
