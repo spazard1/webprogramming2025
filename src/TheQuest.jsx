@@ -39,6 +39,20 @@ const TheQuest = () => {
   const [password, setPassword] = useState(localStorage.getItem("password"));
   const [playerFlashTimeouts, setPlayerFlashTimeouts] = useState({});
 
+  useEffect(() => {
+    for (const [key, value] of new URLSearchParams(
+      window.location.search
+    ).entries()) {
+      if (key === "name") {
+        localStorage.setItem("name", value);
+        setName(value);
+      } else if (key === "password") {
+        localStorage.setItem("password", value);
+        setPassword(value);
+      }
+    }
+  }, []);
+
   const getPlayerStatuses = useCallback(() => {
     if (document.visibilityState !== "visible") {
       return;
