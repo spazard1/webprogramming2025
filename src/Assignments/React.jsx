@@ -68,9 +68,8 @@ const React = () => {
         <div className="assignmentSectionTitle">(10 Points) App component</div>
         <ol>
           <li>
-            The root App component created by create-react-app will control the
-            state of your application. (the rocks themselves, as well as any
-            other state you need)
+            The root App component will control the state of your application.
+            (the rocks themselves, as well as any other state you need)
           </li>
           <li>
             Create three div containers, one for the rocks, one for the four
