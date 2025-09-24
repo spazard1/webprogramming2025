@@ -38,7 +38,16 @@ const Schedule = () => {
       },
       {
         date: "September 23",
-        lectures: ["Web API"],
+        lectures: [
+          {
+            title: "Web API",
+            url: "https://youtu.be/ujFlwsut_W8",
+          },
+          {
+            title: "Web API",
+            url: "https://youtu.be/9wNW8DBJE68",
+          },
+        ],
         assignment: {
           url: "/assignments/WebRequests",
           title: "Web Requests",
