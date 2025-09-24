@@ -68,9 +68,20 @@
   padding: 0 0.5rem;
 }
 
+.playerPathContainer {
+  z-index: 100;
+  transition: background-color linear 1s;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
 .playerPath {
   font-size: 0.5rem;
-  z-index: 100;
+}
+
+.playerPathFlash {
+  background-color: darkslategrey;
+  transition: background-color linear 0.2s;
 }
 
 .transparentCircle {

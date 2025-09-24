@@ -12,8 +12,6 @@ const Home = () => {
           Steven Yackel yacste@bethel.edu
           <br />
           Tues 6-9 PM RC422
-          <br />
-          Office Hours: By appointment only
         </div>
         <div className="sectionContainer">
           <div className="sectionTitle">Books</div>
