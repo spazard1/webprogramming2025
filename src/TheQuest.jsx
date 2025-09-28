@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import axios from "axios";
-import BackgroundImagePath from "./backgroundpath.jpg";
+import step0 from "./step0.jpg";
 import classNames from "classnames";
 import step1 from "./step1.jpg";
 import step2 from "./step2.jpg";
@@ -151,8 +151,8 @@ const TheQuest = () => {
     <div className="theQuestContainer">
       <style>
         {`
-        body {
-          background-image: url("${BackgroundImagePath}");
+        body::before {
+          background-image: url("${step0}");
         }
           `}
       </style>
