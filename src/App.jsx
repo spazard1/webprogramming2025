@@ -6,7 +6,7 @@ import StretchLevels from "./StretchLevels";
 import { HelmetProvider } from "react-helmet-async";
 import assignments from "./Assignments/AssignmentsList";
 import Home from "./Home";
-import TheQuest from "./TheQuest";
+import TheQuest from "./TheQuest/TheQuest";
 import OfficeHours from "./OfficeHours";
 import { useState } from "react";
 import SignalRConnectionContext from "./signalr/SignalRConnectionContext.jsx";

@@ -1,19 +1,19 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import axios from "axios";
-import step0 from "./step0.jpg";
+import step0 from "./step0.webp";
 import classNames from "classnames";
-import step1 from "./step1.jpg";
-import step2 from "./step2.jpg";
-import step3 from "./step3.png";
-import step4 from "./step4.jpg";
-import step5 from "./step5.png";
-import step6 from "./step6.jpg";
-import step7 from "./step7.jpg";
-import step8 from "./step8.jpg";
-import step10 from "./step10.jpg";
-import serverUrl from "./ServerUrl.jsx";
-import useSignalRConnection from "./signalr/useSignalRConnection.jsx";
-import useSignalR from "./signalr/useSignalR.jsx";
+import step1 from "./step1status.webp";
+import step2 from "./step2status.webp";
+import step3 from "./step3status.webp";
+import step4 from "./step4status.webp";
+import step5 from "./step5status.webp";
+import step6 from "./step6status.webp";
+import step7 from "./step7status.webp";
+import step8 from "./step8status.webp";
+import step10 from "./step10status.webp";
+import serverUrl from "../ServerUrl.jsx";
+import useSignalRConnection from "../signalr/useSignalRConnection.jsx";
+import useSignalR from "../signalr/useSignalR.jsx";
 
 import "./TheQuest.css";
 
