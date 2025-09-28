@@ -141,6 +141,12 @@ const TheQuest = () => {
     };
   }, [getPlayerStatuses]);
 
+  const countFinishedSteps = useCallback((obj) => {
+    return Object.keys(obj).filter(
+      (key) => key.startsWith("step") && key !== "step9" && obj[key] > 0
+    ).length;
+  }, []);
+
   return (
     <div className="theQuestContainer">
       <style>
@@ -165,7 +171,7 @@ const TheQuest = () => {
             className="player"
             style={{
               "--progressDiv-angle":
-                360 / (playerStatus.finishedStepsCount ?? 1) + "deg",
+                360 / (countFinishedSteps(playerStatus) ?? 1) + "deg",
             }}
           >
             <div className="playerName">{playerStatus.name}</div>
