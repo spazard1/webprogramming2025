@@ -11,13 +11,11 @@ const StretchLevels = () => {
           with Microsoft Teams.
         </div>
         <div>
-          Use these details to join the meeting:
-          <br />
           <a
             href="https://teams.microsoft.com/meet/2174900691214?p=aq6FJAYVhsXpAEayPP"
             target="_blank"
           >
-            https://teams.microsoft.com/meet/2174900691214?p=aq6FJAYVhsXpAEayPP
+            Join Teams Meeting
           </a>
           <br />
           Meeting ID: 217 490 069 121 4
