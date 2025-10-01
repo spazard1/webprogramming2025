@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignments", "Assignments", "{39D37D13-1A77-DB53-501B-8CF36D38B79E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudStorage", "Assignments\CloudStorage\CloudStorage.csproj", "{A00F9A72-CD41-E950-D2CB-B78386A26D5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A00F9A72-CD41-E950-D2CB-B78386A26D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00F9A72-CD41-E950-D2CB-B78386A26D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00F9A72-CD41-E950-D2CB-B78386A26D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00F9A72-CD41-E950-D2CB-B78386A26D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A00F9A72-CD41-E950-D2CB-B78386A26D5F} = {39D37D13-1A77-DB53-501B-8CF36D38B79E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82B7AE68-D5D2-4C5D-9833-317A35D54BBE}
+	EndGlobalSection
+EndGlobal
