@@ -55,7 +55,16 @@ const Schedule = () => {
       },
       {
         date: "September 30",
-        lectures: ["Dependency Injection"],
+        lectures: [
+          {
+            title: "Dependency Injection",
+            url: "https://youtu.be/QQ_nNbOP1dE",
+          },
+          {
+            title: "Dependency Injection",
+            url: "https://youtu.be/duo6CwwvVi0",
+          },
+        ],
         assignment: {
           url: "/assignments/WebApi",
           title: "Web API",

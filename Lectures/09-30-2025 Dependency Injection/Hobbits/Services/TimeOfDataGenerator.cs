@@ -2,6 +2,6 @@
 {
     public class TimeOfDataGenerator
     {
-        public string TimeOfDay { get; } = DateTime.Now.ToString();
+        public string TimeOfDay { get; } = DateTime.UtcNow.ToString();
     }
 }

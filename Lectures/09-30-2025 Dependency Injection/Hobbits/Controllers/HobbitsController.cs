@@ -1,4 +1,5 @@
 ﻿using Hobbits.Entities;
+using Hobbits.Filters;
 using Hobbits.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -7,6 +8,8 @@ namespace Hobbits.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [ServiceFilter(typeof(RequestLoggingFilter))]
+    [ServiceFilter(typeof(RequestIdFilter))]
     public class HobbitsController : Controller
     {
         private readonly HobbitLogger hobbitLogger;
@@ -21,11 +24,8 @@ namespace Hobbits.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            hobbitLogger.Log("Starting GET");
-
             var hobbits = hobbitsDatabase.GetAll().Select(hobbit => new HobbitEntity(hobbit));
-
-            hobbitLogger.Log("Ending GET");
+            hobbitLogger.Log("Number of hobbits returned: " + hobbits.Count());
 
             return Json(hobbits);
         }
@@ -33,14 +33,10 @@ namespace Hobbits.Controllers
         [HttpGet("{index:int}")]
         public IActionResult Get(int index)
         {
-            hobbitLogger.Log("Starting GET ONE");
-
             if (index < 0 || index >= hobbitsDatabase.Count)
             {
                 return StatusCode((int)HttpStatusCode.NotFound);
             }
-
-            hobbitLogger.Log("Ending GET ONE");
 
             return Json(new HobbitEntity(hobbitsDatabase.Get(index)));
         }
@@ -48,11 +44,8 @@ namespace Hobbits.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] HobbitEntity hobbitEntity)
         {
-            hobbitLogger.Log("Starting POST");
-
             hobbitsDatabase.Add(hobbitEntity.ToModel());
 
-            hobbitLogger.Log("Ending POST");
             return Json(hobbitEntity);
         }
     }

@@ -1,3 +1,4 @@
+using Hobbits.Filters;
 using Hobbits.Services;
 
 namespace Hobbits
@@ -10,13 +11,16 @@ namespace Hobbits
 
             // Add services to the container.
             builder.Services.AddSingleton<HobbitsDatabase>();
-            builder.Services.AddTransient<TimeOfDataGenerator>();
-            builder.Services.AddTransient<GuidGenerator>();
-            builder.Services.AddTransient<NumberGenerator>();
-            builder.Services.AddTransient<HobbitLogger>();
+            builder.Services.AddScoped<TimeOfDataGenerator>();
+            builder.Services.AddScoped<GuidGenerator>();
+            builder.Services.AddScoped<NumberGenerator>();
+            builder.Services.AddScoped<HobbitLogger>();
+
+            builder.Services.AddScoped<RequestLoggingFilter>();
+            builder.Services.AddScoped<RequestIdFilter>();
 
 #if DEBUG
-            builder.Services.AddTransient<IRequestIdGenerator, NumberGenerator>();
+            builder.Services.AddTransient<IRequestIdGenerator, GuidGenerator>();
 #else
             builder.Services.AddTransient<IRequestIdGenerator, GuidGenerator>();
 #endif
@@ -27,6 +31,8 @@ namespace Hobbits
             _ = builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().WithExposedHeaders("*"));
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
