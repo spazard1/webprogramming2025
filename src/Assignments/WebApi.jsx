@@ -154,7 +154,11 @@ const WebApi = () => {
             list should be capped at 30. During a POST request to create a new
             entry, clear the list first if it has too many entries.
           </li>
-          <li>Remember that POST requests should return the created data.</li>
+          <li>
+            You must include the html, js, and css files from the Web Requests
+            assignment in your wwwroot folder so they are opened when the
+            project is started.
+          </li>
         </ol>
       </div>
     </Assignment>

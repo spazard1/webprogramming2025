@@ -5,7 +5,8 @@ import "./Rules.css";
 const rules = [
   "No inline styles or inline javascript. Event handlers (e.g. onClick) that call named functions are okay.",
   "Error messages must be “in-page” i.e. no pop-ups or alerts.",
-  "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission.",
+  "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission. " +
+    "In addition, do not include any build output folders in your submission. Examples include node_modules, debug, release, bin, and obj.",
   "All requests that submit a body to your server must have their entities validated with appropriate annotations, such as MinLength, Range, or Required.",
   "The main page of your of your application must either be served from the server root path or use a client app in the same directory that can be started locally with npm.",
   "Service/data/model classes must not have any http, request, or response references.",
