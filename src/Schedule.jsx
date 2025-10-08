@@ -72,7 +72,13 @@ const Schedule = () => {
       },
       {
         date: "October 7",
-        lectures: ["TFH async/await"],
+        lectures: [
+          {
+            title: "TFH async/await",
+            url: "https://youtu.be/7SCl9C371zw",
+          },
+          { title: "TFH async/await", url: "https://youtu.be/8MHcq2TbEl0" },
+        ],
         assignment: {
           url: "/assignments/DependencyInjection",
           title: "Dependency Injection",
