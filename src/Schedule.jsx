@@ -86,7 +86,10 @@ const Schedule = () => {
       },
       {
         date: "October 14",
-        lectures: ["React"],
+        lectures: [
+          { title: "React", url: "https://youtu.be/j4mpe6dKqlo" },
+          { title: "React", url: "https://youtu.be/CdxMz_JEghY" },
+        ],
         assignment: {
           url: "/assignments/TFHAsyncAwait",
           title: "TFH async/await",
