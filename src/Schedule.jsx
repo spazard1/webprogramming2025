@@ -97,7 +97,10 @@ const Schedule = () => {
       },
       {
         date: "October 21",
-        lectures: ["Queues"],
+        lectures: [
+          { title: "Queues", url: "https://youtu.be/45OP7Chwdpg" },
+          { title: "Queues", url: "https://youtu.be/hDuquU7HItA" },
+        ],
         assignment: {
           url: "/assignments/React",
           title: "React",
