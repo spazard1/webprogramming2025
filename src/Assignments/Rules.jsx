@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Rules.css";
 
 const rules = [
-  "No inline styles or inline javascript. Event handlers (e.g. onClick) that call named functions are okay.",
+  "No inline styles or inline javascript in HTML files. Three exceptions to this rule that are okay: Event handlers (e.g. onClick) that call named functions, setting the style attribute in React components, and javascript event handlers in React components.",
   "Error messages must be “in-page” i.e. no pop-ups or alerts.",
   "Any resources not created by you (images, javascript libraries, etc.) must be referenced using a CDN or URL, not directly included in your assignment submission. " +
     "In addition, do not include any build output folders in your submission. Examples include node_modules, debug, release, bin, and obj.",

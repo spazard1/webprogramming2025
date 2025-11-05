@@ -1,0 +1,6 @@
+@Gargoyles_HostAddress = http://localhost:5213
+
+GET {{Gargoyles_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
