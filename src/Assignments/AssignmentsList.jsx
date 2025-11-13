@@ -7,7 +7,7 @@ import React from "./React";
 import Queues from "./Queues";
 import CloudStorage from "./CloudStorage";
 import IfMatch from "./IfMatch";
-import ApiVersioning from "./ApiVersioning";
+import APIVersioning from "./APIVersioning";
 import JWT from "./JWT";
 import ResponsiveDesign from "./ResponsiveDesign";
 
@@ -48,9 +48,9 @@ const assignments = {
     title: "If-Match",
     component: () => <IfMatch />,
   },
-  ApiVersioning: {
+  APIVersioning: {
     title: "API Versioning",
-    component: () => <ApiVersioning />,
+    component: () => <APIVersioning />,
   },
   JWT: {
     title: "JWT",

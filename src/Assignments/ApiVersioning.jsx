@@ -1,9 +1,9 @@
 import Assignment from "./Assignment";
 
-const ApiVersioning = () => {
+const APIVersioning = () => {
   return (
     <Assignment
-      title="Api Versioning"
+      title="API Versioning"
       maxRuleNumber={10}
       existingRuleNumber={9}
       videoLink={"https://www.youtube.com/watch?v=qW1ciSCsIEI"}
@@ -75,6 +75,6 @@ const ApiVersioning = () => {
   );
 };
 
-export default ApiVersioning;
+export default APIVersioning;
 
-ApiVersioning.propTypes = {};
+APIVersioning.propTypes = {};

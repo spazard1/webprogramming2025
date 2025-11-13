@@ -126,7 +126,9 @@ const Schedule = () => {
       },
       {
         date: "November 11",
-        lectures: ["API Versioning"],
+        lectures: [
+          { title: "API Versioning", url: "https://youtu.be/7Gm0KrITV2k" },
+        ],
         assignment: {
           url: "/assignments/IfMatch",
           title: "If-Match",

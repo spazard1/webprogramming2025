@@ -1,0 +1,28 @@
+Where to put api version?
+
+Header
+Pros
+Avoids cluttering the URL
+
+Cons
+Version information is more hidden, harder to debug
+
+Body
+Pros
+Always next to the data
+More details in api-version than in URL
+
+Cons
+Every single request would need to send a body. GET requests don't have body
+Each entity needs to know the version explictly
+End of life of a version has a LOT of code changes
+
+URL
+Pros
+Easy for everyone to see the version
+User can change URL manually to different version.
+This supports caching and cache-busting
+
+Cons
+Long URLS!
+User can change URL manually to different version.
