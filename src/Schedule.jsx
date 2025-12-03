@@ -148,7 +148,9 @@ const Schedule = () => {
       },
       {
         date: "December 2",
-        lectures: ["Responsive Design"],
+        lectures: [
+          { title: "Responsive Design", url: "https://youtu.be/_VDfRm1g-Bs" },
+        ],
         assignment: {
           url: "/assignments/JWT",
           title: "JWT",
