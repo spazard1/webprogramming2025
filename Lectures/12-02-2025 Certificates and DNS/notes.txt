@@ -1,0 +1,41 @@
+Certificates
+
+1. Public Key
+
+    Everyone sees this, automatically downloaded by your browser
+    .cer (only has public key, not a private)
+
+2. Private Key
+
+    in .pfx files (a certificate file that has both the public and private key)
+
+    RSA
+        2^2048
+
+    Elipical Curve
+        2^128
+
+3. Subject
+
+    CN=www.google.com
+
+    Alternative Names
+        CN=mail.google.com
+        CN=*.google.com
+
+4. Signature
+    Signed by a certificate authority
+
+makecert.exe -ks 2048 -a RSA -sub="www.google.com"
+
+
+DNS 
+Domain Name Service
+
+    Records (inside of a DNS entry)
+    A the final step, the ipv4 address (127.4.5.6)
+    AAAA the final step, the ipv6 address FF:45::34
+    Namespace the actual user friendly name (google, net, com)
+    CNAME oldwebsitename -> newwebsite
+    TXT
+    
