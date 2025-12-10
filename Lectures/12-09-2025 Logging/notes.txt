@@ -1,0 +1,76 @@
+Logging
+
+5 - Trace/Diagnostics logs
+    EVERYTHING - entered a method, exited method, parameters sent to a method, return values
+
+4 - Debug
+    Where do you think your code MIGHT fail?
+
+3 - Information
+    Something just happened. A user was created in the database, a controller finished running, a background queue was processed.
+
+2 - Warning
+    Something MIGHT go wrong, could turn into a problem
+
+1 - Error
+    An actual problem, shows up as an exception being thrown
+
+0 - Critical
+    Probably the server won't even boot up
+
+-1 - Failure Audit
+    Someone tried to login that wasn't authorized
+
+We use numbers to easily filter as "more important than Information for example, i.e. all warnings and errors"
+
+Logging Cost
+
+1. Storage
+    How long do we store logs for?
+        30 days is typical for most logs, longer for warnings and higher
+
+2. CPU
+    Logging can be fire and forget (in async cases)
+    Disable expensive logging in normal situations
+
+    if (Logging.IsDebug()) {
+        SomeExpensiveLogCalculation();
+    }
+
+
+What should we log?
+    PII
+        user-id -> guid, email address, ssn
+        username
+        ip-address
+        address (location)
+
+    Data center name, or node (CPU/machine) id
+
+    Timings
+        Start/Stop time of Requests
+        Boot time of the server itself
+        Time of external requests to queues, other services, databases, etc.
+
+    Date/Time of the Request/Worker process
+
+    Errors
+        Stack trace, files that were missing, etc.
+
+    HTTP/REST
+        Method/Action (POST, PUT, GET, etc.)
+        Headers
+            Almost all headers are fair game to log, but NOT certs, authorization tokens, etc.
+        URL
+            path
+            address
+            query string parameters (i.e. api-version)
+
+            NOT the SAS part of the URL
+
+
+Answer:
+    1. For all seven severity levels, come up with an example that you would log from one of the assignments in this class
+
+    2. False Negatives vs. False Positives - Which is worse and why?
+
