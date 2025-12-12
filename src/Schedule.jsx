@@ -158,7 +158,10 @@ const Schedule = () => {
       },
       {
         date: "December 9",
-        lectures: ["Logging", "Final Exam Review"],
+        lectures: [
+          { title: "Logging", url: "https://youtu.be/9mcX_D8Unr4" },
+          { title: "Final Exam Review", url: "https://youtu.be/ekPb2vbsv1I" },
+        ],
         assignment: {
           url: "/assignments/ResponsiveDesign",
           title: "Responsive Design",
