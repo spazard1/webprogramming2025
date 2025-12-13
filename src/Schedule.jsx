@@ -27,7 +27,6 @@ const Schedule = () => {
             url: "https://www.youtube.com/watch?v=IsGLJ-MIpY4",
           },
           {
-            title: "Web Requests",
             url: "https://www.youtube.com/watch?v=w-lFWoSVero",
           },
         ],
@@ -44,7 +43,6 @@ const Schedule = () => {
             url: "https://youtu.be/ujFlwsut_W8",
           },
           {
-            title: "Web API",
             url: "https://youtu.be/9wNW8DBJE68",
           },
         ],
@@ -61,7 +59,6 @@ const Schedule = () => {
             url: "https://youtu.be/QQ_nNbOP1dE",
           },
           {
-            title: "Dependency Injection",
             url: "https://youtu.be/duo6CwwvVi0",
           },
         ],
@@ -77,7 +74,7 @@ const Schedule = () => {
             title: "TFH async/await",
             url: "https://youtu.be/7SCl9C371zw",
           },
-          { title: "TFH async/await", url: "https://youtu.be/8MHcq2TbEl0" },
+          { url: "https://youtu.be/8MHcq2TbEl0" },
         ],
         assignment: {
           url: "/assignments/DependencyInjection",
@@ -88,7 +85,7 @@ const Schedule = () => {
         date: "October 14",
         lectures: [
           { title: "React", url: "https://youtu.be/j4mpe6dKqlo" },
-          { title: "React", url: "https://youtu.be/CdxMz_JEghY" },
+          { url: "https://youtu.be/CdxMz_JEghY" },
         ],
         assignment: {
           url: "/assignments/TFHAsyncAwait",
@@ -99,7 +96,7 @@ const Schedule = () => {
         date: "October 21",
         lectures: [
           { title: "Queues", url: "https://youtu.be/45OP7Chwdpg" },
-          { title: "Queues", url: "https://youtu.be/hDuquU7HItA" },
+          { url: "https://youtu.be/hDuquU7HItA" },
         ],
         assignment: {
           url: "/assignments/React",
@@ -224,7 +221,9 @@ const Schedule = () => {
                             {typeof lecture === "string" && <>{lecture}</>}
                             {typeof lecture !== "string" && (
                               <a href={lecture.url} target="_blank">
-                                Part {index + 1}
+                                {lecture.title
+                                  ? lecture.title
+                                  : "Part " + (index + 1)}
                               </a>
                             )}
                           </>
